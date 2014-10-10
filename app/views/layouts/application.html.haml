@@ -1,0 +1,44 @@
+!!!
+%html
+  %head
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %title= content_for?(:title) ? yield(:title) : 'Ward W. | Portfolio'
+    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Portfolio'}"}
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    %link{:rel => "stylesheet", :type => "text/css", :href => "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"}
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
+    = csrf_meta_tags
+  %body
+    .container
+
+      .header
+        %ul.nav.nav-pills.pull-right
+          %li
+            %a{ :href => "/"}
+              Home
+          %li
+            %a{ :href => "/portfolio"}
+              Portfolio
+        %h3.text-muted
+          Ward W.
+
+      =yield
+
+      .footer
+        %ul.nav.nav-pills.pull-left
+          %li{ :style => "padding-top: 10px;"}
+            Ward W. Vuillemot, 2014
+        %ul.nav.nav-pills.pull-right
+          %li
+            %a{ :href => "aboutme"}
+              %i.fa.fa-info-circle.fa-2x
+          %li
+            %a{ :href => "http://wardspics.com"}
+              %i.fa.fa-camera-retro.fa-2x
+          %li
+            %a{ :href => "http://linkedin.com/in/wwvuillemot"}
+              %i.fa.fa-linkedin-square.fa-2x
+          %li
+            %a{ :href => "http://github.com/wwvuillemot"}
+              %i.fa.fa-github-square.fa-2x

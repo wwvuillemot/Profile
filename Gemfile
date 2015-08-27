@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'thin'
+gem 'pg'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -20,10 +21,6 @@ group :development do
   gem 'rails_layout'
   gem 'spring'
 end
-group :development, :test do
-  gem 'pg'
-end
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end

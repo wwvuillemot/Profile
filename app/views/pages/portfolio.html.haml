@@ -1,0 +1,400 @@
+:css
+  #portfolioCarouselAmazonTote, #portfolioCarouselAmazonTote .carousel {
+    height: 415px !important;
+    border: 4px solid rgb(228, 121, 17);
+    border-radius: 8px;
+  }
+
+  #portfolioCarouselAmazonTote .carousel-inner > .item > img {
+    height: 400px !important;
+  }
+
+  .carousel-indicators{
+    top: 90%;
+  }
+
+  .carousel-indicators li{
+
+    color: #c3c3c3;
+    text-indent: 0px;
+    width: 100px;
+    border: 0px;
+    height: 20px;
+  }
+
+  .carousel-indicators li.active{
+    color: black;
+    text-indent: 0px;
+    border: 0px;
+    width: 100px;
+    height: 20px;
+    background: white;
+  }
+
+  img.xbox{
+    background-color: rgb(16, 124, 16);
+  }
+
+  .carousel-indicators li.xbox.active{
+    color: rgb(16, 124, 16);
+  }
+
+  img.amazon{
+    background-color: rgb(228, 121, 17);
+  }
+
+  .carousel-indicators li.amazon.active{
+    color: rgb(228, 121, 17);
+  }
+
+  img.boeing{
+    background-color: rgb(0, 56, 168);
+  }
+
+  .carousel-indicators li.boeing.active{
+    color: rgb(0, 56, 168);
+  }
+
+  circle{
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 22px;
+    text-align: center;
+    position: relative;
+    top: -5px;
+  }
+
+#portfolioCarousel.carousel.slide{"data-ride" => "carousel"}
+  / Indicators
+  %ol.carousel-indicators
+    %li.xbox.active{"data-slide-to" => "0", "data-target" => "#portfolioCarousel"} @Xbox
+    %li.amazon{"data-slide-to" => "1", "data-target" => "#portfolioCarousel"} @Amazon
+    %li.boeing{"data-slide-to" => "2", "data-target" => "#portfolioCarousel"} @Boeing
+  .carousel-inner
+    .item.active
+      %img.xbox{:alt => "@Xbox One", :src => "#{asset_path('Transparent.gif')}"}/
+      .container
+        %img{:src => "#{asset_path('xbox.png')}"}/
+        .carousel-caption
+          %h1 Personalizing Discovery
+          %p
+            With an ever-growing catalog of first- and third-party sources,
+            how do you blend together both search and browse into a single,
+            cohesive experience?  More so, how do you do so across a federated
+            space of different services, all while maintaining the flexability
+            for real-time changes, even when there are millions of simultaneous
+            users?
+          %p
+            %a.btn.btn-lg.btn-primary{:href => "#xbox", :role => "button"} Learn More
+    .item
+      %img.amazon{:alt => "@Amazon", :src => "#{asset_path('Transparent.gif')}"}/
+      .container
+        %img{:src => "#{asset_path('amazon.png')}"}/
+        .carousel-caption
+          %h1 Food &amp; Totes
+          %p
+            How do you replace the very analog and tactile experience of
+            shopping for food   with a completely digital one?  Can you change
+            the
+            %i end-to-end experience
+            of one of the   largest online
+            retailers, and in the process, make it feel more like your  best
+            friend dropped off a few items from the store?
+          %p
+            %a.btn.btn-lg.btn-primary{:href => "#amazon", :role => "button"} Learn More
+    .item
+      %img.boeing{:alt => "@Boeing", :src => "#{asset_path('Transparent.gif')}"}/
+      .container
+        %img{:src => "#{asset_path('boeing.png')}"}/
+        .carousel-caption
+          %h1 Airplanes Over Databases
+          %p
+            How do you take 30 years of technology and hundreds of
+            databases, and with those provide a
+            %i user experience
+            that
+            moves customers out of the solution-space of command-lines and
+            into the intuitive problem-space of airplanes, runways, and
+            weather conditions?
+          %p
+            %a.btn.btn-lg.btn-primary{:href => "#boeing", :role => "button"} Learn More
+  %a.left.carousel-control{"data-slide" => "prev", :href => "#portfolioCarousel", :role => "button"}
+    %span.glyphicon.glyphicon-chevron-left
+  %a.right.carousel-control{"data-slide" => "next", :href => "#portfolioCarousel", :role => "button"}
+    %span.glyphicon.glyphicon-chevron-right
+.container
+
+  %a{:name => "xbox"}
+  %h2 Personalizing Discovery @ XboxOne
+  %p.lead
+    With an ever-growing catalog of first- and third-party
+    sources, how do you blend together both search and browse into a single,
+    cohesive experience?  More so, how do you do so across a federated space
+    of different services, all while maintaining the flexability for real-time
+    changes, even when there are millions of simultaneous users?
+  %p
+    When we said we wanted to personalize XboxOne, we meant much more than
+    just allowing our customers the ability to select their favorite color.
+    For us, personalization meant giving customers quick access to their
+    favorites with deep-linked Pins. It meant solving the cold-start problem
+    of an engaging experience from Day Zero. And it meant growing that
+    experience by adopting to their implicit preferences and likes over time.
+    While XboxOne was inarguably built as a game console, we were
+    determined to also make it a multi-media platform.
+  %p
+    As such, when we began to imagine XboxOne, we concentrated our efforts
+    on how our customers discover and enjoy content, regardless of whether it
+    is a game, a movie, or a song.  Historically, many sites approach the
+    problem of a large catalog by slapping on search (aka solve for the
+    %i lean-forward
+    user intent) and calling it a day, letting you find
+    the content.  But that is not enough. Some days you do not know what you
+    want (aka
+    %i lean-back
+    user intent) and you want the content to find
+    you.  Again, many sites slap on a taxonomy for customers to browse, but
+    this can be unwieldly for a large corpus of content types and genres, not
+    to mention that
+    %i how
+    you construct your taxonomy varies by culture.
+    Even when using sophisticated browse approaches — such as
+    recommendations or editorial picks — any single approach cannot
+    support every user intent.  Our challenge, then, was to figure out how to
+    harmonize multiple
+    %i discovery vectors
+    into a single, cohesive
+    experience.
+  %p
+    Beyond the aforementioned search and browse vectors,  we wanted to
+    include a variety of new discovery vectors.  These included editorial
+    picks, recommendations, and social suggestions, to name just a few.  We
+    knew from experience that each discovery vector worked better for certain
+    media-types, and could vary by customer.  We were aware that some
+    customers were motivated by top hits, while others would watch a movie a
+    friend had watched.  In order for us to truly provide a personalized
+    experience, we needed to be able to boost one vector at the expense of
+    another based on a customer's behavior. For example, if you tended to
+    watch sci-fi movies on Friday nights, we combined this with the fact that
+    you converted from a top 10 list better than a recommendation to ensure we
+    placed "top 10 sci-fi movies" front and center.
+  %p
+    This is where I entered the picture. During the design of XboxOne, I
+    played a key role in promoting this next-level personalization on both the
+    services and experiential sides.  I introduced the abstraction of an
+    %i ascriptive spectrum
+    that was necessary to support these different
+    discovery vectors. More specifically, we created a syntax that allowed one
+    side of the spectrum (perscriptive vectors such as Editorial) to be
+    interwoven with the other side (descriptive vectors such as
+    Recommendations).  I championed — and led the team that eventually
+    delivered — the architecture that now powers Xbox Home, Pins, Store,
+    and Search.
+  %p
+    As noted previously, the goal that I set for my team was to find a way
+    to bring together any number of disparate discovery vectors (
+    %i e.g.
+    search, recommendations, top 10, editorial picks) and mix them together in
+    a way that allowed us to change (boost or decrease) a signal based upon
+    A/B testing.  An additional goal was to do this entirely from the services
+    side, thus obviating the need for an XboxOne flash update whenever we
+    wanted to change the console experience, as is still the case with
+    Xbox360.
+  %p
+    We achieved these goals to the extent that — from our customers
+    perspective — it is now perceived as a single unified
+    = succeed "," do
+      %i
+        user
+        experience
+
+  %a{:name => "amazon"}
+  %h2 Food &amp; Totes @ Amazon
+  %p.lead
+    How do you replace the very analog and tactile experience
+    of   shopping for food   with a completely digital one?  Can you change
+    the
+    %i end-to-end experience
+    of one of the largest online retailers,
+    and in the process, make it feel more like your   best friend   dropped
+    off a few items from the store?
+  %p
+    At both
+    %b AmazonFresh
+    and
+    %b AmazonTote
+    our goal was to change
+    the
+    %i last-mile experience
+    for our customers. Namely, we believed
+    that the experience we provided our customers extended past the website,
+    right up to the time their order arrived at their door. In this context,
+    Design takes on multiple new dimensions and challenges that are not
+    normally encountered with a purely digital experience.
+  %p
+    At
+    = succeed "," do
+      %b AmazonFresh
+  %p
+    At
+    = succeed "," do
+      %b AmazonTote
+  %p
+    Ultimately, we designed an
+    %i end-to-end
+    experience that utilized
+    elements of 1-click, but expanded it to include a critical "your tote-bag"
+    ordering page where you managed your upcoming delivery. Our primary goal
+    was to create a delivery experience that felt more like a friend had
+    dropped off a few items on their way back from the store, rather than
+    echoing delivery through a national carrier. While the pilot program has
+    since moved on to further stages of investigation, the results we
+    collected around buying behavior and consumer loyalty to the program
+    proved that we had nailed it experientially.
+  #portfolioCarouselAmazonTote.carousel.slide{"data-ride" => "carousel"}
+    / Indicators
+    .carousel-inner
+      .item.active
+        %img{:src => "#{asset_path('amazontote/amazon_tote_learn_more.png')}"}/
+        .container
+          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
+            %h1
+              %circle 1
+              Learn More
+            %p
+              Quickly learn what the
+              %b AmazonTote
+              experience is all about.
+      .item
+        %img{:src => "#{asset_path('amazontote/amazon_tote_from_product_page.png')}"}/
+        .container
+          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
+            %h1
+              %circle 2
+              Find An Item
+            %p
+              For qualifying items in the Amazon catalog, you add it to your next
+              AmazonTote delivery directly from the product page.
+      .item
+        %img{:src => "#{asset_path('amazontote/amazon_tote_order_page.png')}"}/
+        .container
+          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
+            %h1
+              %circle 3
+              Confirm Your Order
+            %p Once you decide you want an item, we have a single confirmation page before we add it to your next delivery.
+      .item
+        %img{:src => "#{asset_path('amazontote/amazon_tote_thank_you_page.png')}"}/
+        .container
+          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
+            %h1
+              %circle 4
+              Thank You Page
+            %p Once you confirmed your order, a simple thank you and ability to return to your shopping.
+      .item
+        %img{:src => "#{asset_path('amazontote/amazon_tote_order_page.png')}"}/
+        .container
+          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
+            %h1
+              %circle 5
+              Delivery Page
+            %p At-a-glance see what will be next delievered to your doorstep.
+      .item
+        %img{:src => "#{asset_path('amazontote/amazon_tote_account_page.png')}"}/
+        .container
+          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
+            %h1
+              %circle 6
+              Account Page
+            %p
+              Manage all your upcoming and past deliveries, including
+              cancellations and returns.
+      .item
+        %img{:src => "#{asset_path('amazontote/amazon_tote_returns_page.png')}"}/
+        .container
+          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
+            %h1
+              %circle 7
+              Returns Page
+            %p Hassle-free setup of a return: we come to you to pick-up and return, all for free.
+    %a.left.carousel-control{"data-slide" => "prev", :href => "#portfolioCarouselAmazonTote", :role => "button"}
+      %span.glyphicon.glyphicon-chevron-left
+    %a.right.carousel-control{"data-slide" => "next", :href => "#portfolioCarouselAmazonTote", :role => "button"}
+      %span.glyphicon.glyphicon-chevron-right
+
+  %a{:name => "boeing"}
+  %h2 Airplanes Over Databases @ Boeing
+  %p.lead
+    How do you take thirty years of technology and hundreds of
+    databases, and with those provide a
+    %i user experience
+    that moves
+    customers out of the solution-space of command-lines and into the
+    intuitive problem-space of airplanes, runways, and weather conditions?
+  %p
+    Imagine over three decades of aerospace engineers creating airplane
+    performance databases that span every conceivable airplane and engine
+    configuration for a range of flight regimes such as takeoff, landing and
+    enroute navigation. Now imagine that each of these databases has minimally
+    hundreds, and quite possibly thousands of input variables that you have to
+    set correctly in order to perform a calculation.  And then imagine that
+    you have to do so by entering them into a
+    %code text
+    file,
+    referencing a separate Word document to learn what each obscure variable
+    name means.  And once you have this ready, you have to run it from the
+    %code DOS
+    command-line to get results that you then import into
+    Excel to finally begin to do analysis.
+  %p
+    When I arrived at Boeing in 2000, this was considered
+    "state-of-the-art" for flight operations engineers at airlines around the
+    world who operated our airplanes.  I spent the next five years championing
+    an entirely new experience for our customers, finally convincing
+    management to let me lead an effort that — I believe —
+    dramatically improved things for everyone.  Namely, we replaced
+    command-line prompts and obscure variable names with immediately
+    understandable nouns such as airplanes, engines, airports and atmospheric
+    condition.
+  %p
+    To achieve this, we needed to hide away all the details of the
+    databases in a way that was scalable for both our customers and our
+    database developers. With hundreds of databases and thousands of
+    exceptions, it was not practical to hard-wire the exceptions into the
+    application, as had been done in the past.  Instead, I designed a
+    XML-formmatted DSL (domain-specific language) that allowed the database
+    developers to create a
+    %i self-describing database
+    that not only
+    defined all the variables and their legal values, but also all the rules
+    that governed these variables. I then implemented the run-time state
+    machine that powered the UI from this XML, effectively allowing us to
+    generate UI on-the-fly.   As lead developer and designer, I lead the team
+    to hide from our customers all the complexities of our previous
+    implementations, and in its place let customers focus on the more
+    intuitive problem-space where they selected the airplane and engine
+    configuration and put it in context to the airport(s) and atmospheric
+    condition(s) relevant to the analysis. We even included a complete
+    post-computation analysis experience that integrated the power of pivot
+    tables and charts so that customers could immediately jump into the heart of
+    things once a calculation was complete.
+  %p
+    We were not only successful at the
+    %i product experience
+    level, but
+    we succeed on the process-level, too.  I took a group of six aerospace
+    engineers, and I taught them object-oriented programming and agile
+    best-practices such as: 1) software version control; 2) test-driven
+    development; 3) design patterns such as MVC, pub-sub, flywheel, etc.; 4)
+    dependency management and injection; and, 5) continuous integration...all
+    of which we accomplished in under two years.
+
+:javascript
+  $('#portfolioCarouselAmazonTote').carousel({
+      interval: 10000
+  })
+  $('#portfolioCarousel').carousel({
+      interval: 7000
+  })

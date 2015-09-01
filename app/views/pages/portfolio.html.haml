@@ -31,6 +31,14 @@
     background: white;
   }
 
+  img.shs{
+    background-color: rgb(0, 57, 128);
+  }
+
+  .carousel-indicators li.xbox.active{
+    color: rgb(0, 57, 128);
+  }
+
   img.xbox{
     background-color: rgb(16, 124, 16);
   }
@@ -70,11 +78,24 @@
 #portfolioCarousel.carousel.slide{"data-ride" => "carousel"}
   / Indicators
   %ol.carousel-indicators
-    %li.xbox.active{"data-slide-to" => "0", "data-target" => "#portfolioCarousel"} @Xbox
+    %li.shs.active{"data-slide-to" => "0", "data-target" => "#portfolioCarousel"} @SHS
+    %li.xbox{"data-slide-to" => "0", "data-target" => "#portfolioCarousel"} @Xbox
     %li.amazon{"data-slide-to" => "1", "data-target" => "#portfolioCarousel"} @Amazon
     %li.boeing{"data-slide-to" => "2", "data-target" => "#portfolioCarousel"} @Boeing
   .carousel-inner
     .item.active
+      %img.shs{:alt => "@SHS", :src => "#{asset_path('Transparent.gif')}"}/
+      .container
+        %img{:src => "#{asset_path('shs.png')}"}/
+        .carousel-caption
+          %h1 Reimagining Home Services
+          %p
+            How do you start with a clean slate and re-build both the technical stack
+            and overall user experience for all of Sears Home Services?  This is
+            what our team was formed to do, and is doing now today.
+          %p
+            %a.btn.btn-lg.btn-primary{:href => "#shs", :role => "button"} Learn More
+    .item
       %img.xbox{:alt => "@Xbox One", :src => "#{asset_path('Transparent.gif')}"}/
       .container
         %img{:src => "#{asset_path('xbox.png')}"}/
@@ -126,6 +147,30 @@
   %a.right.carousel-control{"data-slide" => "next", :href => "#portfolioCarousel", :role => "button"}
     %span.glyphicon.glyphicon-chevron-right
 .container
+  %a{:name => "shs"}
+  %h2 Reimagining Home Services @ SHS
+  %p.lead
+    How do you start with a clean slate and re-build both the technical stack
+    and overall user experience for all of Sears Home Services?  This is
+    what our team was formed to do, and is doing now today.
+  %p
+    I joined the team as the fifth member (and first engineer) at the end of 2014.
+    Since then, I have helped grow the engineering team to over two dozen front-end
+    and full-stack engineers.  I wrote the first few services that today help
+    serve all the front-end experiences.  I also established the software
+    life-cycle processes and tooling to ensure that we
+    =link_to 'contintuously deploy and integrate for each and every commit.', 'https://blog.codeship.com/how-sears-home-services-improve-their-workflow-with-codeship/'
+  %p
+    We have grown rapidly, both in size of team, and scope of responsibility.  As
+    a consequence, we are continually adopting our processes and tools to meet
+    our needs.  We strive to automate everything we can, and additionally own everything
+    we ship including unit-, functional-, integration-, and performance-tests,
+    devops and on-call.  We do not throw our problems on to other teams to solve.
+    We work side-by-side PMs and Designers to ensure that we collectively deliver
+    world-class experiences for our customers.  And even when we make a mistake, we
+    help each other get back up and try again.  Ultimately, my responsibility is
+    foster a work environment where team members are empowered to do the right thing
+    every time.
 
   %a{:name => "xbox"}
   %h2 Personalizing Discovery @ XboxOne

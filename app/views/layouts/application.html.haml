@@ -1,12 +1,12 @@
 !!!
 %html
   %head
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     %title= content_for?(:title) ? yield(:title) : 'Ward W. | Portfolio'
-    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Portfolio'}"}
+    %meta{name: "description", content: "#{content_for?(:description) ? yield(:description) : 'Portfolio'}"}
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
-    %link{:rel => "stylesheet", :type => "text/css", :href => "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"}
-    %link{:rel => "stylesheet", :type => "text/css", :href => "http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css"}
+    %link{rel: "stylesheet", type: "text/css", href: "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"}
+    %link{rel: "stylesheet", type: "text/css", href: "http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css"}
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
 
     = csrf_meta_tags
@@ -15,11 +15,11 @@
 
       .header
         %ul.nav.nav-pills.pull-right
-          %li
-            %a{ :href => "/"}
+          %li{ class: is_active_path(root_path) ? 'active' : ''}
+            %a{ href: root_path}
               Home
-          %li
-            %a{ :href => "/portfolio"}
+          %li{ class: is_active_path(portfolio_path) ? 'active' : ''}
+            %a{ href: portfolio_path}
               Portfolio
         %h3.text-muted
           Ward W.
@@ -28,18 +28,18 @@
 
       .footer
         %ul.nav.nav-pills.pull-left
-          %li{ :style => "padding-top: 10px;"}
+          %li{ style: "padding-top: 10px;"}
             Ward W. Vuillemot, 2015
         %ul.nav.nav-pills.pull-right
           %li
-            %a{ :href => "aboutme"}
+            %a{ href: aboutme_path}
               %i.fa.fa-info-circle.fa-2x
           %li
-            %a{ :href => "http://wardspics.com"}
+            %a{ href: "http://wardspics.com"}
               %i.fa.fa-camera-retro.fa-2x
           %li
-            %a{ :href => "http://linkedin.com/in/wwvuillemot"}
+            %a{ href: "http://linkedin.com/in/wwvuillemot"}
               %i.fa.fa-linkedin-square.fa-2x
           %li
-            %a{ :href => "http://github.com/wwvuillemot"}
+            %a{ href: "http://github.com/wwvuillemot"}
               %i.fa.fa-github-square.fa-2x

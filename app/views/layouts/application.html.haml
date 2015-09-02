@@ -15,12 +15,15 @@
 
       .header
         %ul.nav.nav-pills.pull-right
-          %li{ class: is_active_path(root_path) ? 'active' : ''}
-            %a{ href: root_path}
+          %li{ class: is_active_path(root_path) ? 'active' : '' }
+            %a{ href: root_path, id: 'nav_home'}
               Home
           %li{ class: is_active_path(portfolio_path) ? 'active' : ''}
-            %a{ href: portfolio_path}
+            %a{ href: portfolio_path, id: 'nav_portfolio' }
               Portfolio
+          %li{ class: is_active_path(resume_path) ? 'active' : '' }
+            %a{ href: resume_path, id: 'nav_resume'}
+              Resume
         %h3.text-muted
           Ward W.
 

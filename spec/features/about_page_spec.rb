@@ -1,16 +1,10 @@
-# Feature: 'About' page
-#   As a visitor
-#   I want to visit an 'about' page
-#   So I can learn more about the website
 feature 'About page' do
 
-  # Scenario: Visit the 'about' page
-  #   Given I am a visitor
-  #   When I visit the 'about' page
-  #   Then I see "About the Website"
+  include PageHelper
+
   scenario 'Visit the about page' do
-    visit 'pages/aboutme'
-    expect(page).to have_content 'Who Am I?'
+    visit aboutme_path
+    check_aboutme_page(page)
   end
 
 end

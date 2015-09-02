@@ -16,5 +16,6 @@ module PageHelper
   end
 
   def check_resume_page(page)
+    expect(page).to have_http_status(:redirect)
   end
 end

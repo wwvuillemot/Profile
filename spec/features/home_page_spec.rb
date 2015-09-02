@@ -21,8 +21,15 @@ feature 'Home page' do
 
   scenario 'visit the resume page from home' do
     visit root_path
-    click_link('nav_resume')
-    check_resume_page(page)
+    begin
+      click_link('nav_resume')
+      fail 'We should not get here'
+    rescue ActionController::RoutingError
+      # cannot check external links
+      # due to rack.  just consume exception
+      # check page
+      check_resume_page(page)
+    end
   end
 
   scenario 'visit the resume page from home' do

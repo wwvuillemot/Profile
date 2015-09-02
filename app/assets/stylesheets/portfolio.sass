@@ -12,17 +12,25 @@
 .carousel-indicators li
   color: #c3c3c3
   text-indent: 0px
-  width: 100px
+  min-width: 70px
   border: 0px
   height: 20px
+  font-size: 0.9em
 
 .carousel-indicators li.active
   color: black
   text-indent: 0px
   border: 0px
-  width: 100px
+  min-width: 100px
   height: 20px
   background: white
+  line-height: 22px
+
+.item
+  .container
+    margin: 0px
+    padding: 0px
+    width: 100%
 
 =company-color($company, $color)
   img.#{$company}
@@ -34,6 +42,7 @@
 +company-color('xbox',   rgb(16, 124, 16))
 +company-color('amazon', rgb(228, 121, 17))
 +company-color('boeing', rgb(0, 56, 168))
++company-color('seattle_astro', rgb(255, 198, 3))
 
 circle
   border: 2px solid white

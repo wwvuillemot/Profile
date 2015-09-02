@@ -2,9 +2,10 @@
   / Indicators
   %ol.carousel-indicators
     %li.shs.active{"data-slide-to" => "0", "data-target" => "#portfolioCarousel"} @SHS
-    %li.xbox{"data-slide-to" => "0", "data-target" => "#portfolioCarousel"} @Xbox
-    %li.amazon{"data-slide-to" => "1", "data-target" => "#portfolioCarousel"} @Amazon
-    %li.boeing{"data-slide-to" => "2", "data-target" => "#portfolioCarousel"} @Boeing
+    %li.xbox{"data-slide-to" => "1", "data-target" => "#portfolioCarousel"} @Xbox
+    %li.amazon{"data-slide-to" => "2", "data-target" => "#portfolioCarousel"} @Amazon
+    %li.boeing{"data-slide-to" => "3", "data-target" => "#portfolioCarousel"} @Boeing
+    %li.boeing{"data-slide-to" => "4", "data-target" => "#portfolioCarousel"} @SeattleAstro
   .carousel-inner
     .item.active
       %img.shs{alt: "@SHS", src: "#{asset_path('Transparent.gif')}"}/
@@ -65,6 +66,18 @@
             weather conditions?
           %p
             %a.btn.btn-lg.btn-primary{href: "#boeing", role: "button"} Learn More
+    .item
+      %img.seattle_astro{alt: "@SeattleAstro", src: "#{asset_path('Transparent.gif')}"}/
+      .container
+        %img{src: "#{asset_path('seattle_astro.png')}"}/
+        .carousel-caption
+          %h1 Skies Over Seattle
+          %p
+            My passion for astronomy, community outreach and beautiful, hand-crafted
+            experiences combined themselves into a completely re-invented online
+            experience for Seattle Astronomical Society.
+          %p
+            %a.btn.btn-lg.btn-primary{href: "#seattle_astro", role: "button"} Learn More
   %a.left.carousel-control{"data-slide" => "prev", href: "#portfolioCarousel", role: "button"}
     %span.glyphicon.glyphicon-chevron-left
   %a.right.carousel-control{"data-slide" => "next", href: "#portfolioCarousel", role: "button"}
@@ -358,6 +371,39 @@
     development; 3) design patterns such as MVC, pub-sub, flywheel, etc.; 4)
     dependency management and injection; and, 5) continuous integration...all
     of which we accomplished in under two years.
+
+  %a{name: "seattle_astro"}
+  %h2 Skies over Seattle @ SeattleAstro
+  %p.lead
+    My passion for astronomy, community outreach and beautiful, hand-crafted
+    experiences combined themselves into a completely re-invented online
+    experience for
+    =link_to 'Seattle Astronomical Society.', 'http://seattleastro.org'
+  %p
+    I took over the society's website some three years ago. In that time, I
+    worked with the Board to create a visual language, information architecture,
+    and overall design for the entire site.  I am responsible for every aspect
+    of the site, including a responsively-designed front-end that leverages
+    Bootstrap, SASS, and Javascript.  There is extensive administrative features
+    both for members to maintain their own information, along with roles-based
+    permissions for Board members and site moderators.  The site also integrates
+    with Mandrill for all transactional emails, and provides a complete end-to-end
+    integration with PayPal to obviate the need for manual processing of checks or
+    cash, although these payment means are still available to members.
+  %p
+    Since 
+    introducing the website, we have seen membership increase year-over-year, much of
+    it attributal to a more welcoming online presence that helps drive a sense of
+    community amongst our members and the greater communities of Seattle.
+  %p
+    I was recongized in 2014 as
+    %b Webmaster of the Year
+    by the
+    =link_to 'Astronomical League', 'https://www.astroleague.org'
+    for the significant contributions to astronomy and community-building through
+    the website.
+
+
 
 :javascript
   $('#portfolioCarouselAmazonTote').carousel({

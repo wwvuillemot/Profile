@@ -14,6 +14,7 @@ feature 'Portfolio page' do
     expect(page).to have_content "@ Xbox"
     expect(page).to have_content "@ Amazon"
     expect(page).to have_content "@ Boeing"
+    expect(page).to have_content "@ SeattleAstro"
   end
 
 end

@@ -19,6 +19,12 @@ feature 'Home page' do
     check_portfolio_page(page)
   end
 
+  scenario 'contact me from home' do
+    visit root_path
+    contact_link = find(:id, 'contact_me')
+    expect(contact_link['href']).to start_with 'mailto:wwv@mac.com'
+  end
+
   scenario 'visit the resume page from home' do
     visit root_path
     begin

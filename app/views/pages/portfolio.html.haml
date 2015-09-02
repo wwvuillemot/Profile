@@ -1,80 +1,3 @@
-:css
-  #portfolioCarouselAmazonTote, #portfolioCarouselAmazonTote .carousel {
-    height: 415px !important;
-    border: 4px solid rgb(228, 121, 17);
-    border-radius: 8px;
-  }
-
-  #portfolioCarouselAmazonTote .carousel-inner > .item > img {
-    height: 400px !important;
-  }
-
-  .carousel-indicators{
-    top: 90%;
-  }
-
-  .carousel-indicators li{
-
-    color: #c3c3c3;
-    text-indent: 0px;
-    width: 100px;
-    border: 0px;
-    height: 20px;
-  }
-
-  .carousel-indicators li.active{
-    color: black;
-    text-indent: 0px;
-    border: 0px;
-    width: 100px;
-    height: 20px;
-    background: white;
-  }
-
-  img.shs{
-    background-color: rgb(0, 57, 128);
-  }
-
-  .carousel-indicators li.xbox.active{
-    color: rgb(0, 57, 128);
-  }
-
-  img.xbox{
-    background-color: rgb(16, 124, 16);
-  }
-
-  .carousel-indicators li.xbox.active{
-    color: rgb(16, 124, 16);
-  }
-
-  img.amazon{
-    background-color: rgb(228, 121, 17);
-  }
-
-  .carousel-indicators li.amazon.active{
-    color: rgb(228, 121, 17);
-  }
-
-  img.boeing{
-    background-color: rgb(0, 56, 168);
-  }
-
-  .carousel-indicators li.boeing.active{
-    color: rgb(0, 56, 168);
-  }
-
-  circle{
-    border: 2px solid white;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    display: inline-block;
-    font-size: 22px;
-    text-align: center;
-    position: relative;
-    top: -5px;
-  }
-
 #portfolioCarousel.carousel.slide{"data-ride" => "carousel"}
   / Indicators
   %ol.carousel-indicators
@@ -84,9 +7,9 @@
     %li.boeing{"data-slide-to" => "2", "data-target" => "#portfolioCarousel"} @Boeing
   .carousel-inner
     .item.active
-      %img.shs{:alt => "@SHS", :src => "#{asset_path('Transparent.gif')}"}/
+      %img.shs{alt: "@SHS", src: "#{asset_path('Transparent.gif')}"}/
       .container
-        %img{:src => "#{asset_path('shs.png')}"}/
+        %img{src: "#{asset_path('shs.png')}"}/
         .carousel-caption
           %h1 Reimagining Home Services
           %p
@@ -94,11 +17,11 @@
             and overall user experience for all of Sears Home Services?  This is
             what our team was formed to do, and is doing now today.
           %p
-            %a.btn.btn-lg.btn-primary{:href => "#shs", :role => "button"} Learn More
+            %a.btn.btn-lg.btn-primary{href: "#shs", role: "button"} Learn More
     .item
-      %img.xbox{:alt => "@Xbox One", :src => "#{asset_path('Transparent.gif')}"}/
+      %img.xbox{alt: "@Xbox One", src: "#{asset_path('Transparent.gif')}"}/
       .container
-        %img{:src => "#{asset_path('xbox.png')}"}/
+        %img{src: "#{asset_path('xbox.png')}"}/
         .carousel-caption
           %h1 Personalizing Discovery
           %p
@@ -109,11 +32,11 @@
             for real-time changes, even when there are millions of simultaneous
             users?
           %p
-            %a.btn.btn-lg.btn-primary{:href => "#xbox", :role => "button"} Learn More
+            %a.btn.btn-lg.btn-primary{href: "#xbox", role: "button"} Learn More
     .item
-      %img.amazon{:alt => "@Amazon", :src => "#{asset_path('Transparent.gif')}"}/
+      %img.amazon{alt: "@Amazon", src: "#{asset_path('Transparent.gif')}"}/
       .container
-        %img{:src => "#{asset_path('amazon.png')}"}/
+        %img{src: "#{asset_path('amazon.png')}"}/
         .carousel-caption
           %h1 Food &amp; Totes
           %p
@@ -125,11 +48,11 @@
             retailers, and in the process, make it feel more like your  best
             friend dropped off a few items from the store?
           %p
-            %a.btn.btn-lg.btn-primary{:href => "#amazon", :role => "button"} Learn More
+            %a.btn.btn-lg.btn-primary{href: "#amazon", role: "button"} Learn More
     .item
-      %img.boeing{:alt => "@Boeing", :src => "#{asset_path('Transparent.gif')}"}/
+      %img.boeing{alt: "@Boeing", src: "#{asset_path('Transparent.gif')}"}/
       .container
-        %img{:src => "#{asset_path('boeing.png')}"}/
+        %img{src: "#{asset_path('boeing.png')}"}/
         .carousel-caption
           %h1 Airplanes Over Databases
           %p
@@ -141,13 +64,13 @@
             into the intuitive problem-space of airplanes, runways, and
             weather conditions?
           %p
-            %a.btn.btn-lg.btn-primary{:href => "#boeing", :role => "button"} Learn More
-  %a.left.carousel-control{"data-slide" => "prev", :href => "#portfolioCarousel", :role => "button"}
+            %a.btn.btn-lg.btn-primary{href: "#boeing", role: "button"} Learn More
+  %a.left.carousel-control{"data-slide" => "prev", href: "#portfolioCarousel", role: "button"}
     %span.glyphicon.glyphicon-chevron-left
-  %a.right.carousel-control{"data-slide" => "next", :href => "#portfolioCarousel", :role => "button"}
+  %a.right.carousel-control{"data-slide" => "next", href: "#portfolioCarousel", role: "button"}
     %span.glyphicon.glyphicon-chevron-right
 .container
-  %a{:name => "shs"}
+  %a{name: "shs"}
   %h2 Reimagining Home Services @ SHS
   %p.lead
     How do you start with a clean slate and re-build both the technical stack
@@ -172,7 +95,7 @@
     foster a work environment where team members are empowered to do the right thing
     every time.
 
-  %a{:name => "xbox"}
+  %a{name: "xbox"}
   %h2 Personalizing Discovery @ XboxOne
   %p.lead
     With an ever-growing catalog of first- and third-party
@@ -255,7 +178,7 @@
         user
         experience
 
-  %a{:name => "amazon"}
+  %a{name: "amazon"}
   %h2 Food &amp; Totes @ Amazon
   %p.lead
     How do you replace the very analog and tactile experience
@@ -302,7 +225,7 @@
     / Indicators
     .carousel-inner
       .item.active
-        %img{:src => "#{asset_path('amazontote/amazon_tote_learn_more.png')}"}/
+        %img{src: "#{asset_path('amazontote/amazon_tote_learn_more.png')}"}/
         .container
           .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
             %h1
@@ -313,7 +236,7 @@
               %b AmazonTote
               experience is all about.
       .item
-        %img{:src => "#{asset_path('amazontote/amazon_tote_from_product_page.png')}"}/
+        %img{src: "#{asset_path('amazontote/amazon_tote_from_product_page.png')}"}/
         .container
           .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
             %h1
@@ -323,7 +246,7 @@
               For qualifying items in the Amazon catalog, you add it to your next
               AmazonTote delivery directly from the product page.
       .item
-        %img{:src => "#{asset_path('amazontote/amazon_tote_order_page.png')}"}/
+        %img{src: "#{asset_path('amazontote/amazon_tote_order_page.png')}"}/
         .container
           .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
             %h1
@@ -331,7 +254,7 @@
               Confirm Your Order
             %p Once you decide you want an item, we have a single confirmation page before we add it to your next delivery.
       .item
-        %img{:src => "#{asset_path('amazontote/amazon_tote_thank_you_page.png')}"}/
+        %img{src: "#{asset_path('amazontote/amazon_tote_thank_you_page.png')}"}/
         .container
           .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
             %h1
@@ -339,7 +262,7 @@
               Thank You Page
             %p Once you confirmed your order, a simple thank you and ability to return to your shopping.
       .item
-        %img{:src => "#{asset_path('amazontote/amazon_tote_order_page.png')}"}/
+        %img{src: "#{asset_path('amazontote/amazon_tote_order_page.png')}"}/
         .container
           .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
             %h1
@@ -347,7 +270,7 @@
               Delivery Page
             %p At-a-glance see what will be next delievered to your doorstep.
       .item
-        %img{:src => "#{asset_path('amazontote/amazon_tote_account_page.png')}"}/
+        %img{src: "#{asset_path('amazontote/amazon_tote_account_page.png')}"}/
         .container
           .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
             %h1
@@ -357,19 +280,19 @@
               Manage all your upcoming and past deliveries, including
               cancellations and returns.
       .item
-        %img{:src => "#{asset_path('amazontote/amazon_tote_returns_page.png')}"}/
+        %img{src: "#{asset_path('amazontote/amazon_tote_returns_page.png')}"}/
         .container
           .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
             %h1
               %circle 7
               Returns Page
             %p Hassle-free setup of a return: we come to you to pick-up and return, all for free.
-    %a.left.carousel-control{"data-slide" => "prev", :href => "#portfolioCarouselAmazonTote", :role => "button"}
+    %a.left.carousel-control{"data-slide" => "prev", href: "#portfolioCarouselAmazonTote", role: "button"}
       %span.glyphicon.glyphicon-chevron-left
-    %a.right.carousel-control{"data-slide" => "next", :href => "#portfolioCarouselAmazonTote", :role => "button"}
+    %a.right.carousel-control{"data-slide" => "next", href: "#portfolioCarouselAmazonTote", role: "button"}
       %span.glyphicon.glyphicon-chevron-right
 
-  %a{:name => "boeing"}
+  %a{name: "boeing"}
   %h2 Airplanes Over Databases @ Boeing
   %p.lead
     How do you take thirty years of technology and hundreds of

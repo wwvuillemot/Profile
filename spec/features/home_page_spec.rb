@@ -15,4 +15,16 @@ feature 'Home page' do
     expect(page).to have_content "Hi! I am Ward."
   end
 
+  scenario 'visit the about me page from home' do
+    visit root_path
+    click_link('read_more_about_me')
+    expect(page).to have_content 'Who Am I?'
+  end
+
+  scenario 'visit the portfolio page from home' do
+    visit root_path
+    click_link('read_more_portfolio')
+    expect(page).to have_content '@ SHS'
+  end
+
 end

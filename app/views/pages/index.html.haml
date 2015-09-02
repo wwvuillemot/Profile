@@ -1,5 +1,5 @@
 .jumbotron
-  %img.portrait{:src => "#{asset_path('portrait.jpg')}"}/
+  %img.portrait{src: "#{asset_path('portrait.jpg')}"}/
 
   %h2 Hi!  I am Ward.
 
@@ -25,10 +25,10 @@
         problems
   %p.lead Interested in talking?  I know I am.
   %p
-    %a.btn.btn-lg.btn-success{:href => "mailto:wwv@mac.com?subject=Let's Talk!&body=Hi Ward! We want to talk with you. :)", :role => "button"} Let's Talk!
+    %a.btn.btn-lg.btn-success{href: "mailto:wwv@mac.com?subject=Let's Talk!&body=Hi Ward! We want to talk with you. :)", role: "button"} Let's Talk!
 
 .row.details
-  
+
   .col-lg-6
     %h3 More About Me
     %p
@@ -48,7 +48,7 @@
       = succeed "." do
         %i experience
     %p.pull-right
-      %a.btn.btn-sm.btn-primary{:href => "aboutme.html", :role => "Buton"} Read More
+      %a.btn.btn-sm.btn-primary{href: aboutme_path, role: "button", id: 'read_more_about_me'} Read More
 
   .col-lg-6
     %h3 Portfolio
@@ -66,4 +66,4 @@
       day, we need to focus on bringing value to the things we create, not
       just moving around bits.
     %p.pull-right
-      %a.btn.btn-sm.btn-primary{:href => "portfolio.html", :role => "button"} Read More
+      %a.btn.btn-sm.btn-primary{href: portfolio_path, role: "button", id: "read_more_portfolio"} Read More

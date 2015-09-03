@@ -9,11 +9,12 @@ class Slide
   def self.seattle_astro
     slide = []
     slide << Slide.create({ order: 1, path: 'seattle_astro/seattle_astro_home.png', title: 'Home', description: 'Quickly learn what the <b>SeattleAstro</b> upcoming events and announcements.', active: true})
-    slide << Slide.create({ order: 2, path: 'seattle_astro/seattle_astro_welcome.png', title: 'Modern Design', description: 'We leverage best-in-class design language to build a compelling community identity.' })
-    slide << Slide.create({ order: 3, path: 'seattle_astro/seattle_astro_membership.png', title: 'Online Membership', description: 'We ensure that our membership has frictionless access to their memebership, with the ability to join or renew online.' })
-    slide << Slide.create({ order: 4, path: 'seattle_astro/seattle_astro_events.png', title: 'Events Page', description: 'All our events are consolidated in a single place along with easy ability to access via your favorite RSS reader.' })
-    slide << Slide.create({ order: 5, path: 'seattle_astro/seattle_astro_event.png', title: 'Event Page', description: 'At-a-glance specifics about the event, including location.  If you express interest on an event page, you will notified by email anytime comments or announcements about the event are made online.' })
-    slide << Slide.create({ order: 6, path: 'seattle_astro/seattle_astro_administration.png', title: 'Administration', description: 'The Board and website moderators have complete control over the content of the website.' })
+    slide << Slide.create({ order: 2, path: 'seattle_astro/seattle_astro_responsive_design.png', title: 'Responsive Design', description: 'The site is entirely responsive for desktop, tablet and smart phone.' })
+    slide << Slide.create({ order: 3, path: 'seattle_astro/seattle_astro_welcome.png', title: 'Modern Design', description: 'We leverage best-in-class design language to build a compelling community identity.' })
+    slide << Slide.create({ order: 4, path: 'seattle_astro/seattle_astro_membership.png', title: 'Online Membership', description: 'We ensure that our membership has frictionless access to their memebership, with the ability to join or renew online.' })
+    slide << Slide.create({ order: 5, path: 'seattle_astro/seattle_astro_events.png', title: 'Events Page', description: 'All our events are consolidated in a single place along with easy ability to access via your favorite RSS reader.' })
+    slide << Slide.create({ order: 6, path: 'seattle_astro/seattle_astro_event.png', title: 'Event Page', description: 'At-a-glance specifics about the event, including location.  If you express interest on an event page, you will notified by email anytime comments or announcements about the event are made online.' })
+    slide << Slide.create({ order: 7, path: 'seattle_astro/seattle_astro_administration.png', title: 'Administration', description: 'The Board and website moderators have complete control over the content of the website.' })
     return slide
   end
 

@@ -26,7 +26,7 @@ this.GoogleAnalytics = (function() {
       } else {
         window._gaq.push(["_trackPageview"]);
       }
-      return window._gaq.push(["_trackPageLoadTime"]);
+      return window._gaq.push(["_setSiteSpeedSampleRate"]);
     }
   };
   GoogleAnalytics.isLocalRequest = function() {

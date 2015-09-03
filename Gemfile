@@ -45,6 +45,7 @@ group :development, :test do
   gem 'simplecov'
 end
 group :test do
+  gem "codeclimate-test-reporter", group: :test, require: nil
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'

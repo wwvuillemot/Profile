@@ -1,7 +1,6 @@
 # Portfolio
 
-This is my [personal portfolio site for software engineering](http://www.wardosworld.com).  
-The `git` repo is itself a part of the portfolio.  While simple, it illustrates what I believe are
+This is my [personal portfolio site for software engineering](http://www.wardosworld.com).  The `git` repo is itself a part of the portfolio.  While simple, it illustrates what I believe are
 best practices.  :)
 
 Cheers! Ward

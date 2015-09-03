@@ -1,7 +1,12 @@
-Portfolio
-================
+# Portfolio
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+This is my [personal portfolio site for software engineering](http://www.wardosworld.com).  
+The `git` repo is itself a part of the portfolio.  While simple, it illustrates what I believe are
+best practices.  :)
+
+Cheers! Ward
+
+## Health
 
 [![Code Climate](https://codeclimate.com/github/wwvuillemot/Profile/badges/gpa.svg)](https://codeclimate.com/github/wwvuillemot/Profile)
 
@@ -9,8 +14,7 @@ Portfolio
 
 [ ![Codeship Status for wwvuillemot/Profile](https://codeship.com/projects/086fd560-a9ae-0132-bfc3-46f09a3a7fb9/status?branch=master)](https://codeship.com/projects/67776)
 
-Ruby on Rails
--------------
+## Ruby on Rails
 
 This application requires:
 

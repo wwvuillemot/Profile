@@ -1,0 +1,9 @@
+- carousel_id = "portfolioCarousel#{carousel}"
+%div{class: 'carousel slide', id: carousel_id, data: { ride: 'carousel' }}
+  .carousel-inner
+    -slides.each do |slide|
+      =render partial: 'shared/slide', locals: slide
+  %a.left.carousel-control{"data-slide" => "prev", href: "##{carousel_id}", role: "button"}
+    %span.glyphicon.glyphicon-chevron-left
+  %a.right.carousel-control{"data-slide" => "next", href: "##{carousel_id}", role: "button"}
+    %span.glyphicon.glyphicon-chevron-right

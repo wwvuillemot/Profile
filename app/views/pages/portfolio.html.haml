@@ -218,10 +218,41 @@
     At
     = succeed "," do
       %b AmazonFresh
+    we were challenged with any number of problems
+    on a weekly basis.  From an experiential perspective,   we needed to go
+    deep into customer psychology to understand how people approached shopping
+    for food, something that is &mdash; for many &mdash; a very personal and
+    subjective experience. How do you earn their trust when selecting and
+    handling their produce on their behalf?  How do you convey to them package
+    size in a way that is intuitive and immediately accessible when every item
+    on your website has the same real-estate?  How do you design an experience
+    that works equally well for shoppers who walk up and down every aisle to
+    find what they need,  as well as for "spear-fisherman" shoppers who know
+    exactly what they want?  How do you set expectations and predict inventory
+    when much of your perishable goods may go bad?  How do you solve warehouse
+    packing problems (for which I received two patents) in a way that both
+    reduces warehouse walk-time and increases packing density? As a senior
+    engineer on the team, I helped solve these and many other challenges from
+    a continuously fed backlog of stories, with responsibilities covering every
+    aspect from requirements gathering, to UX design, to test-driven
+    development, and even operations.
+
   %p
     At
     = succeed "," do
       %b AmazonTote
+    we again looked to redefine the last-mile
+    experience, but this time for the entirety of Amazon.com.  I was in charge
+    of a small team, composed of an engineer and a designer, along with an
+    external design firm for graphic logo design.  I pulled double-duty;
+    during the day I was its product manager, and at night its front-end
+    developer.  Together we created &mdash; soup to nuts &mdash; an entirely
+    new buying experience for which I am named in four patents.  We launched
+    AmazonTote in under ten weeks, which included: 1) design and procurement of
+    tote-bags from China; 2) setting up a fulfillment center; 3) complete
+    design and implementation of a website experience; and 4) all logistics
+    including delivery.
+    
   %p
     Ultimately, we designed an
     %i end-to-end
@@ -234,76 +265,8 @@
     since moved on to further stages of investigation, the results we
     collected around buying behavior and consumer loyalty to the program
     proved that we had nailed it experientially.
-  #portfolioCarouselAmazonTote.carousel.slide{"data-ride" => "carousel"}
-    / Indicators
-    .carousel-inner
-      .item.active
-        %img{src: "#{asset_path('amazontote/amazon_tote_learn_more.png')}"}/
-        .container
-          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
-            %h1
-              %circle 1
-              Learn More
-            %p
-              Quickly learn what the
-              %b AmazonTote
-              experience is all about.
-      .item
-        %img{src: "#{asset_path('amazontote/amazon_tote_from_product_page.png')}"}/
-        .container
-          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
-            %h1
-              %circle 2
-              Find An Item
-            %p
-              For qualifying items in the Amazon catalog, you add it to your next
-              AmazonTote delivery directly from the product page.
-      .item
-        %img{src: "#{asset_path('amazontote/amazon_tote_order_page.png')}"}/
-        .container
-          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
-            %h1
-              %circle 3
-              Confirm Your Order
-            %p Once you decide you want an item, we have a single confirmation page before we add it to your next delivery.
-      .item
-        %img{src: "#{asset_path('amazontote/amazon_tote_thank_you_page.png')}"}/
-        .container
-          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
-            %h1
-              %circle 4
-              Thank You Page
-            %p Once you confirmed your order, a simple thank you and ability to return to your shopping.
-      .item
-        %img{src: "#{asset_path('amazontote/amazon_tote_order_page.png')}"}/
-        .container
-          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
-            %h1
-              %circle 5
-              Delivery Page
-            %p At-a-glance see what will be next delievered to your doorstep.
-      .item
-        %img{src: "#{asset_path('amazontote/amazon_tote_account_page.png')}"}/
-        .container
-          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
-            %h1
-              %circle 6
-              Account Page
-            %p
-              Manage all your upcoming and past deliveries, including
-              cancellations and returns.
-      .item
-        %img{src: "#{asset_path('amazontote/amazon_tote_returns_page.png')}"}/
-        .container
-          .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
-            %h1
-              %circle 7
-              Returns Page
-            %p Hassle-free setup of a return: we come to you to pick-up and return, all for free.
-    %a.left.carousel-control{"data-slide" => "prev", href: "#portfolioCarouselAmazonTote", role: "button"}
-      %span.glyphicon.glyphicon-chevron-left
-    %a.right.carousel-control{"data-slide" => "next", href: "#portfolioCarouselAmazonTote", role: "button"}
-      %span.glyphicon.glyphicon-chevron-right
+
+  =render partial: 'shared/carousel', locals: { carousel: 'AmazonTote', slides: @carousels['AmazonTote']}
 
   %a{name: "boeing"}
   %h2 Airplanes Over Databases @ Boeing
@@ -403,10 +366,13 @@
     for the significant contributions to astronomy and community-building through
     the website.
 
-
+  =render partial: 'shared/carousel', locals: { carousel: 'SeattleAstro', slides: @carousels['SeattleAstro']}
 
 :javascript
   $('#portfolioCarouselAmazonTote').carousel({
+      interval: 10000
+  })
+  $('#portfolioCarouselSeattleAstro').carousel({
       interval: 10000
   })
   $('#portfolioCarousel').carousel({

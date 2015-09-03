@@ -1,10 +1,3 @@
-#portfolioCarouselAmazonTote, #portfolioCarouselAmazonTote .carousel
-  height: 415px !important
-  border: 4px solid rgb(228, 121, 17)
-  border-radius: 8px
-
-#portfolioCarouselAmazonTote .carousel-inner > .item > img
-  height: 400px !important
 
 .carousel-indicators
   top: 90%
@@ -38,11 +31,22 @@
   .carousel-indicators li.#{$company}.active
     color: $color
 
+=company-carousel($company, $color)
+  #portfolioCarousel#{$company}, #portfolioCarousel#{$company} .carousel
+    height: 415px !important
+    border: 4px solid $color
+    border-radius: 8px
+
+  #portfolioCarousel#{$company} .carousel-inner > .item > img
+    height: 400px !important
+
 +company-color('shs',    rgb(0, 57, 128))
 +company-color('xbox',   rgb(16, 124, 16))
 +company-color('amazon', rgb(228, 121, 17))
++company-carousel('AmazonTote', rgb(228, 121, 17))
 +company-color('boeing', rgb(0, 56, 168))
 +company-color('seattle_astro', rgb(255, 198, 3))
++company-carousel('SeattleAstro', rgb(255, 198, 3))
 
 circle
   border: 2px solid white

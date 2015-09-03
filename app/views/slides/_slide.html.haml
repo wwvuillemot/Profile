@@ -1,9 +1,9 @@
-.item{ class: defined?(active) && active ? 'active' : ''}
-  %img{src: "#{asset_path(path)}"}/
+.item{ class: slide.active ? 'active' : ''}
+  %img{src: "#{asset_path(slide.path)}"}/
   .container
     .carousel-caption{:style => "color: rgb(1.0, 1.0, 1.0); background: rgba(0,0,0,0.6); padding: 5px 5px 30px 5px; border-radius: 8px;"}
       %h1
-        %circle=index
-        =title
+        %circle=slide.order
+        =slide.title
       %p
-        =raw description
+        =raw slide.description

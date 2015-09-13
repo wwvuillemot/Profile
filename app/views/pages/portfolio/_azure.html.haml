@@ -1,10 +1,10 @@
-.azure
-  %a{name: "azure"}
+%div{ class: "#{company.slug}"}
+  %a{name: company.slug}
   %ul.tag
     %li{ role: :presentation} senior product manager
-  %h2 Games as a Service @ Azure
+  %h2=raw company.headline
   %p.lead
-    =render partial: 'pages/lead/azure'
+    =render partial: company.to_lead_path
   %p
     As a part of an innovations lab within Azure, we were tasked with using
     =link_to 'hypothesis-driven customer development', 'http://steveblank.com/category/customer-development-manifesto/'

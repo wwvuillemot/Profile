@@ -1,10 +1,10 @@
-.xbox
-  %a{name: "xbox"}
+%div{ class: "#{company.slug}"}
+  %a{name: company.slug}
   %ul.tag
     %li{ role: :presentation} senior program manager
-  %h2 Personalizing Discovery @ XboxOne
+  %h2=raw company.headline
   %p.lead
-    =render partial: 'pages/lead/xbox'
+    =render partial: company.to_lead_path
   %p
     When we said we wanted to personalize XboxOne, we meant much more than
     just allowing our customers the ability to select their favorite color.

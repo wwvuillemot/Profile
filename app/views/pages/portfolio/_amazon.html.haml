@@ -1,11 +1,11 @@
-.amazon
-  %a{name: "amazon"}
+%div{ class: "#{company.slug}"}
+  %a{name: company.slug}
   %ul.tag
     %li{ role: :presentation} technical program manager
     %li{ role: :presentation} senior software engineer
-  %h2 Food &amp; Totes @ Amazon
+  %h2=raw company.headline
   %p.lead
-    =render partial: 'pages/lead/amazon'
+    =render partial: company.to_lead_path
   %p
     At both
     %b AmazonFresh
@@ -70,10 +70,3 @@
     since moved on to further stages of investigation, the results we
     collected around buying behavior and consumer loyalty to the program
     proved that we had nailed it experientially.
-
-  =render partial: 'shared/carousel', locals: { carousel: 'AmazonTote', slides: @carousels['AmazonTote']}
-
-  :javascript
-    $('#portfolioCarouselAmazonTote').carousel({
-        interval: 5000
-    })

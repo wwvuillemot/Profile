@@ -1,12 +1,12 @@
-.seattle_astro
-  %a{name: "seattle_astro"}
+%div{ class: "#{company.slug}"}
+  %a{name: company.slug}
   %ul.tag
     %li{ role: :presentation} webmaster
     %li{ role: :presentation} board member
     %li{ role: :presentation} volunteer
-  %h2 Skies over Seattle @ SeattleAstro
+  %h2=raw company.headline
   %p.lead
-    =render partial: 'pages/lead/seattle_astro'
+    =render partial: company.to_lead_path
   %p
     I took over the society's website some three years ago. In that time, I
     worked with the Board to create a visual language, information architecture,
@@ -30,10 +30,3 @@
     =link_to 'Astronomical League', 'https://www.astroleague.org/al/awards/webmst/webmstr.html'
     for the significant contributions to astronomy and community-building through
     the website.
-
-  =render partial: 'shared/carousel', locals: { carousel: 'SeattleAstro', slides: @carousels['SeattleAstro']}
-
-  :javascript
-    $('#portfolioCarouselSeattleAstro').carousel({
-        interval: 5000
-    })

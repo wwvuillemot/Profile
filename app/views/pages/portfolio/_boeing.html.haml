@@ -1,10 +1,10 @@
-.boeing
-  %a{name: "boeing"}
+%div{ class: "#{company.slug}"}
+  %a{name: company.slug}
   %ul.tag
     %li{ role: :presentation} lead software engineer
-  %h2 Planes Over Databases @ Boeing
+  %h2=raw company.headline
   %p.lead
-    =render partial: 'pages/lead/boeing'
+    =render partial: company.to_lead_path
   %p
     Imagine over three decades of aerospace engineers creating airplane
     performance databases that span every conceivable airplane and engine

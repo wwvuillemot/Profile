@@ -20,7 +20,7 @@ describe Slide do
     expect(slide.active).to eql attributes[:active]
   end
   it 'should return slides for amazon tote' do
-    slides = Slide.amazon_tote
+    slides = Slide.amazon
     expect(slides).not_to be_empty
   end
   it 'should return slides for seattle astro' do

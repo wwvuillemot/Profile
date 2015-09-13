@@ -1,85 +1,42 @@
 #portfolioCarousel.carousel.slide{"data-ride" => "carousel"}
   / Indicators
   %ol.carousel-indicators
-    %li.shs.active{"data-slide-to" => "0", "data-target" => "#portfolioCarousel"} @SHS
-    %li.azure{"data-slide-to" => "1", "data-target" => "#portfolioCarousel"} @Azure
-    %li.xbox{"data-slide-to" => "2", "data-target" => "#portfolioCarousel"} @Xbox
-    %li.amazon{"data-slide-to" => "3", "data-target" => "#portfolioCarousel"} @Amazon
-    %li.boeing{"data-slide-to" => "4", "data-target" => "#portfolioCarousel"} @Boeing
-    %li.seattle_astro{"data-slide-to" => "5", "data-target" => "#portfolioCarousel"} @SeattleAstro
+    -is_first = true
+    -index = 0
+    -@portfolio.each do |company|
+      %li{ class: "#{company.slug} #{is_first ? 'active' : ''}", 'data-slide-to' => index, 'data-target' => '#portfolioCarousel'} @#{company.short}
+      -is_first = false
+      -index = index + 1
   .carousel-inner
-    .item.active
-      %img.shs{alt: "@SHS", src: "#{asset_path('Transparent.gif')}"}/
-      .container
-        %img{src: "#{asset_path('shs.png')}"}/
-        .carousel-caption
-          %h1 Reimagining Home Services
-          %p
-            =render partial: 'pages/lead/shs'
-          %p
-            %a.btn.btn-sm.btn-primary{href: "#shs", role: "button"} Learn More
-    .item
-      %img.azure{alt: "@Azure", src: "#{asset_path('Transparent.gif')}"}/
-      .container
-        %img{src: "#{asset_path('azure.png')}"}/
-        .carousel-caption
-          %h1 Games as a Service
-          %p
-            =render partial: 'pages/lead/azure'
-          %p
-            %a.btn.btn-sm.btn-primary{href: "#azure", role: "button"} Learn More
-    .item
-      %img.xbox{alt: "@Xbox One", src: "#{asset_path('Transparent.gif')}"}/
-      .container
-        %img{src: "#{asset_path('xbox.png')}"}/
-        .carousel-caption
-          %h1 Personalizing Discovery
-          %p
-            =render partial: 'pages/lead/xbox'
-          %p
-            %a.btn.btn-sm.btn-primary{href: "#xbox", role: "button"} Learn More
-    .item
-      %img.amazon{alt: "@Amazon", src: "#{asset_path('Transparent.gif')}"}/
-      .container
-        %img{src: "#{asset_path('amazon.png')}"}/
-        .carousel-caption
-          %h1 Food &amp; Totes
-          %p
-            =render partial: 'pages/lead/amazon'
-          %p
-            %a.btn.btn-sm.btn-primary{href: "#amazon", role: "button"} Learn More
-    .item
-      %img.boeing{alt: "@Boeing", src: "#{asset_path('Transparent.gif')}"}/
-      .container
-        %img{src: "#{asset_path('boeing.png')}"}/
-        .carousel-caption
-          %h1 Planes Over Databases
-          %p
-            =render partial: 'pages/lead/boeing'
-          %p
-            %a.btn.btn-sm.btn-primary{href: "#boeing", role: "button"} Learn More
-    .item
-      %img.seattle_astro{alt: "@SeattleAstro", src: "#{asset_path('Transparent.gif')}"}/
-      .container
-        %img{src: "#{asset_path('seattle_astro.png')}"}/
-        .carousel-caption
-          %h1 Skies Over Seattle
-          %p
-            =render partial: 'pages/lead/seattle_astro'
-          %p
-            %a.btn.btn-sm.btn-primary{href: "#seattle_astro", role: "button"} Learn More
+    -is_first = true
+    -@portfolio.each do |company|
+      %div{ class: "item #{is_first ? 'active' : ''}"}
+        %img{alt: "@#{company.short}", src: "#{asset_path('Transparent.gif')}", class: company.slug}
+        .container
+          %img{src: "#{asset_path(company.slug.to_s + '.png')}"}/
+          .carousel-caption
+            %h1=raw company.title
+            %p
+              =render partial: "pages/lead/#{company.slug}"
+            %p
+              %a.btn.btn-sm.btn-primary{href: "##{company.slug}", role: "button"} Learn More
+      -is_first = false
   %a.left.carousel-control{"data-slide" => "prev", href: "#portfolioCarousel", role: "button"}
     %span.glyphicon.glyphicon-chevron-left
   %a.right.carousel-control{"data-slide" => "next", href: "#portfolioCarousel", role: "button"}
     %span.glyphicon.glyphicon-chevron-right
 .container
 
-  =render partial: 'pages/portfolio/shs'
-  =render partial: 'pages/portfolio/azure'
-  =render partial: 'pages/portfolio/xbox'
-  =render partial: 'pages/portfolio/amazon'
-  =render partial: 'pages/portfolio/boeing'
-  =render partial: 'pages/portfolio/seattle_astro'
+  -@portfolio.each do |company|
+    =render partial: "pages/portfolio/#{company.slug}", locals: { company: company }
+    -slides = company.slides
+    -if slides
+      =render partial: 'shared/carousel', locals: { carousel: company.slug, slides: slides}
+
+      :javascript
+        $("#portfolioCarousel#{company.slug}").carousel({
+            interval: 5000
+        })
 
 :javascript
   $('#portfolioCarousel').carousel({

@@ -1,10 +1,10 @@
-.shs
-  %a{name: "shs"}
+%div{ class: "#{company.slug}"}
+  %a{name: company.slug}
   %ul.tag
     %li{ role: :presentation} director of engineering
-  %h2 Reimagining Home Services @ SHS
+  %h2=raw company.headline
   %p.lead
-    =render partial: 'pages/lead/shs'
+    =render partial: company.to_lead_path
   %p
     I joined the team as the fifth member (and first engineer) at the end of 2014.
     Since then, I have helped grow the engineering team to over two dozen front-end

@@ -1,7 +1,5 @@
-
 .carousel-indicators
   top: 86.5%
-
 
 .carousel-indicators li
   color: #c3c3c3
@@ -32,12 +30,13 @@
     color: $color
   div.#{$company}
     ul.tag
+      margin-top: 8px
       float: right
       font-size: 0.7em
       li
         color: white
         background-color: $color
-        padding: 2px 5px 2px 5px
+        padding: 2px 8px 2px 8px
         margin-bottom: 1px
         border-radius: 3px
 
@@ -54,10 +53,10 @@
 +company-color('azure',   rgb(27, 161, 226))
 +company-color('xbox',   rgb(16, 124, 16))
 +company-color('amazon', rgb(228, 121, 17))
-+company-carousel('AmazonTote', rgb(228, 121, 17))
++company-carousel('amazon', rgb(228, 121, 17))
 +company-color('boeing', rgb(0, 56, 168))
 +company-color('seattle_astro', rgb(255, 198, 3))
-+company-carousel('SeattleAstro', rgb(255, 198, 3))
++company-carousel('seattle_astro', rgb(255, 198, 3))
 
 circle
   border: 2px solid white

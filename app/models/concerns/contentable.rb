@@ -39,10 +39,11 @@ module Contentable
       case candidates
       when Hash
         return candidates[slug]
-      when Array
-        self.find_all.each do |candidate|
-          return candidate if candidate.slug == slug
-        end
+      # NOTE untested -- commenting out for now
+      # when Array
+      #   self.find_all.each do |candidate|
+      #     return candidate if candidate.slug == slug
+      #   end
       else
         # intentionally do nothing
         Rails.logger.warn("We do not know how to find [#{slug}] for [#{self.class}]")

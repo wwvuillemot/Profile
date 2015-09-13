@@ -6,6 +6,13 @@ class Company
     return carousel
   end
 
+  def self.find(slug)
+    self.find_all.each do |candidate|
+      return candidate if candidate.slug == slug
+    end
+    return nil
+  end
+
   def self.find_all
     companies = []
     companies << self.create({ slug: :shs, title: 'Reimagining Home Services', short: 'SHS' })

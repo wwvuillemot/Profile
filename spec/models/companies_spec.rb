@@ -15,12 +15,18 @@ describe Company do
     expect(company.title).to eql attributes[:title]
     expect(company.short).to eql attributes[:short]
   end
-  # it 'should return companies for amazon tote' do
-  #   companies = Company.amazon_tote
-  #   expect(companies).not_to be_empty
-  # end
-  # it 'should return companies for seattle astro' do
-  #   companies = Company.seattle_astro
-  #   expect(companies).not_to be_empty
-  # end
+  it 'should return companies' do
+    companies = Company.find_all
+    expect(companies).not_to be_empty
+  end
+  it 'should return seattle_astro' do
+    seattle_astro = Company.find(:seattle_astro)
+    expect(seattle_astro).not_to eql nil
+    expect(seattle_astro.slides).not_to eql nil
+  end
+  it 'should return azure' do
+    azure = Company.find(:azure)
+    expect(azure).not_to eql nil
+    expect(azure.slides).to eql nil
+  end
 end

@@ -18,6 +18,12 @@ describe Company do
   it 'should return companies' do
     companies = Company.find_all
     expect(companies).not_to be_empty
+    companies.each do |company|
+      expect(company.slug).not_to be_empty
+      expect(company.title).not_to be_empty
+      expect(company.short).not_to be_empty
+      expect(company.tags).not_to be_empty
+    end
   end
   it 'should return seattle_astro' do
     seattle_astro = Company.find(:seattle_astro)

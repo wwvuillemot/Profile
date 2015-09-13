@@ -17,7 +17,7 @@
           .carousel-caption
             %h1=raw company.title
             %p
-              =render partial: "pages/lead/#{company.slug}"
+              =render partial: company.to_lead_path
             %p
               %a.btn.btn-sm.btn-primary{href: "##{company.slug}", role: "button"} Learn More
       -is_first = false
@@ -28,15 +28,7 @@
 .container
 
   -@portfolio.each do |company|
-    =render partial: "pages/portfolio/#{company.slug}", locals: { company: company }
-    -slides = company.slides
-    -if slides
-      =render partial: 'shared/carousel', locals: { carousel: company.slug, slides: slides}
-
-      :javascript
-        $("#portfolioCarousel#{company.slug}").carousel({
-            interval: 5000
-        })
+    =render partial: company, locals: { company: company }
 
 :javascript
   $('#portfolioCarousel').carousel({

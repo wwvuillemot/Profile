@@ -1,0 +1,57 @@
+%p
+  Imagine over three decades of aerospace engineers creating airplane
+  performance databases that span every conceivable airplane and engine
+  configuration for a range of flight regimes such as takeoff, landing and
+  enroute navigation. Now imagine that each of these databases has minimally
+  hundreds, and quite possibly thousands of input variables that you have to
+  set correctly in order to perform a calculation.  And then imagine that
+  you have to do so by entering them into a
+  %code text
+  file,
+  referencing a separate Word document to learn what each obscure variable
+  name means.  And once you have this ready, you have to run it from the
+  %code DOS
+  command-line to get results that you then import into
+  Excel to finally begin to do analysis.
+%p
+  When I arrived at Boeing in 2000, this was considered
+  "state-of-the-art" for flight operations engineers at airlines around the
+  world who operated our airplanes.  I spent the next five years championing
+  an entirely new experience for our customers, finally convincing
+  management to let me lead an effort that — I believe —
+  dramatically improved things for everyone.  Namely, we replaced
+  command-line prompts and obscure variable names with immediately
+  understandable nouns such as airplanes, engines, airports and atmospheric
+  condition.
+%p
+  To achieve this, we needed to hide away all the details of the
+  databases in a way that was scalable for both our customers and our
+  database developers. With hundreds of databases and thousands of
+  exceptions, it was not practical to hard-wire the exceptions into the
+  application, as had been done in the past.  Instead, I designed a
+  XML-formmatted DSL (domain-specific language) that allowed the database
+  developers to create a
+  %i self-describing database
+  that not only
+  defined all the variables and their legal values, but also all the rules
+  that governed these variables. I then implemented the run-time state
+  machine that powered the UI from this XML, effectively allowing us to
+  generate UI on-the-fly.   As lead developer and designer, I lead the team
+  to hide from our customers all the complexities of our previous
+  implementations, and in its place let customers focus on the more
+  intuitive problem-space where they selected the airplane and engine
+  configuration and put it in context to the airport(s) and atmospheric
+  condition(s) relevant to the analysis. We even included a complete
+  post-computation analysis experience that integrated the power of pivot
+  tables and charts so that customers could immediately jump into the heart of
+  things once a calculation was complete.
+%p
+  We were not only successful at the
+  %i product experience
+  level, but
+  we succeed on the process-level, too.  I took a group of six aerospace
+  engineers, and I taught them object-oriented programming and agile
+  best-practices such as: 1) software version control; 2) test-driven
+  development; 3) design patterns such as MVC, pub-sub, flywheel, etc.; 4)
+  dependency management and injection; and, 5) continuous integration...all
+  of which we accomplished in under two years.

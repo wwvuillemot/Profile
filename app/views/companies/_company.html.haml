@@ -1,0 +1,19 @@
+%div{ class: "#{company.slug}"}
+  %a{name: company.slug}
+  %ul.tag
+    -company.tags.each do |tag|
+      %li{ role: :presentation}=tag
+  %h2=raw company.headline
+  %p.lead
+    =render partial: company.to_lead_path
+
+  =render partial: company.to_details_path, locals: { company: company }
+
+  -slides = company.slides
+  -if slides
+    =render partial: 'shared/carousel', locals: { carousel: company.slug, slides: slides}
+
+    :javascript
+      $("#portfolioCarousel#{company.slug}").carousel({
+          interval: 5000
+      })

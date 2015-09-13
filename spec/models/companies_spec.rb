@@ -18,7 +18,7 @@ describe Company do
   it 'should return companies' do
     companies = Company.find_all
     expect(companies).not_to be_empty
-    companies.each do |company|
+    companies.each do |slug, company|
       expect(company.slug).not_to be_empty
       expect(company.title).not_to be_empty
       expect(company.short).not_to be_empty

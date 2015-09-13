@@ -3,13 +3,13 @@
   %ol.carousel-indicators
     -is_first = true
     -index = 0
-    -@portfolio.each do |company|
+    -@portfolio.each do |slug, company|
       %li{ class: "#{company.slug} #{is_first ? 'active' : ''}", 'data-slide-to' => index, 'data-target' => '#portfolioCarousel'} @#{company.short}
       -is_first = false
       -index = index + 1
   .carousel-inner
     -is_first = true
-    -@portfolio.each do |company|
+    -@portfolio.each do |slug, company|
       %div{ class: "item #{is_first ? 'active' : ''}"}
         %img{alt: "@#{company.short}", src: "#{asset_path('Transparent.gif')}", class: company.slug}
         .container
@@ -27,7 +27,7 @@
     %span.glyphicon.glyphicon-chevron-right
 .container
 
-  -@portfolio.each do |company|
+  -@portfolio.each do |slug, company|
     =render partial: company, locals: { company: company }
 
 :javascript

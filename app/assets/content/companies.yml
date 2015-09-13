@@ -1,0 +1,30 @@
+shs:
+  slug: :shs
+  title: 'Reimagining Home Services'
+  short: 'SHS'
+  tags: ['director of engineering']
+azure:
+  slug: :azure
+  title: 'Games as a Service'
+  short: 'Azure'
+  tags: ['senior product manager']
+xbox:
+  slug: :xbox
+  title: 'Personalizing Discovery'
+  short: 'Xbox'
+  tags: ['senior program manager']
+amazon:
+  slug: :amazon
+  title: 'Food &amp; Totes'
+  short: 'Amazon'
+  tags: ['technical program manager', 'senior software engineer']
+boeing:
+  slug: :boeing
+  title: 'Planes Over Databases'
+  short: 'Boeing'
+  tags: ['lead software engineer', 'architect']
+seattle_astro:
+  slug: :seattle_astro
+  title: 'Stars Over Seattle'
+  short: 'SeattleAstro'
+  tags: ['webmaster', 'board member', volunteer']

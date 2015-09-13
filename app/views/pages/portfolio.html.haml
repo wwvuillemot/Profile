@@ -2,10 +2,11 @@
   / Indicators
   %ol.carousel-indicators
     %li.shs.active{"data-slide-to" => "0", "data-target" => "#portfolioCarousel"} @SHS
-    %li.xbox{"data-slide-to" => "1", "data-target" => "#portfolioCarousel"} @Xbox
-    %li.amazon{"data-slide-to" => "2", "data-target" => "#portfolioCarousel"} @Amazon
-    %li.boeing{"data-slide-to" => "3", "data-target" => "#portfolioCarousel"} @Boeing
-    %li.boeing{"data-slide-to" => "4", "data-target" => "#portfolioCarousel"} @SeattleAstro
+    %li.azure{"data-slide-to" => "1", "data-target" => "#portfolioCarousel"} @Azure
+    %li.xbox{"data-slide-to" => "2", "data-target" => "#portfolioCarousel"} @Xbox
+    %li.amazon{"data-slide-to" => "3", "data-target" => "#portfolioCarousel"} @Amazon
+    %li.boeing{"data-slide-to" => "4", "data-target" => "#portfolioCarousel"} @Boeing
+    %li.seattle_astro{"data-slide-to" => "5", "data-target" => "#portfolioCarousel"} @SeattleAstro
   .carousel-inner
     .item.active
       %img.shs{alt: "@SHS", src: "#{asset_path('Transparent.gif')}"}/
@@ -18,7 +19,21 @@
             and overall user experience for all of Sears Home Services?  This is
             what our team was formed to do, and is doing now today.
           %p
-            %a.btn.btn-lg.btn-primary{href: "#shs", role: "button"} Learn More
+            %a.btn.btn-sm.btn-primary{href: "#shs", role: "button"} Learn More
+    .item
+      %img.azure{alt: "@Azure", src: "#{asset_path('Transparent.gif')}"}/
+      .container
+        %img{src: "#{asset_path('azure.png')}"}/
+        .carousel-caption
+          %h1 Games as a Service
+          %p
+            Free-to-play games usher in an era of
+            "games as a service," requiring the need to guarantee
+            engaging, evolving gameplay and content, while at the same time
+            generating revenue over the life of the game.  We looked to understand
+            this space through iterative, boots-on-the-ground customer development.
+          %p
+            %a.btn.btn-sm.btn-primary{href: "#azure", role: "button"} Learn More
     .item
       %img.xbox{alt: "@Xbox One", src: "#{asset_path('Transparent.gif')}"}/
       .container
@@ -33,7 +48,7 @@
             for real-time changes, even when there are millions of simultaneous
             users?
           %p
-            %a.btn.btn-lg.btn-primary{href: "#xbox", role: "button"} Learn More
+            %a.btn.btn-sm.btn-primary{href: "#xbox", role: "button"} Learn More
     .item
       %img.amazon{alt: "@Amazon", src: "#{asset_path('Transparent.gif')}"}/
       .container
@@ -49,7 +64,7 @@
             retailers, and in the process, make it feel more like your  best
             friend dropped off a few items from the store?
           %p
-            %a.btn.btn-lg.btn-primary{href: "#amazon", role: "button"} Learn More
+            %a.btn.btn-sm.btn-primary{href: "#amazon", role: "button"} Learn More
     .item
       %img.boeing{alt: "@Boeing", src: "#{asset_path('Transparent.gif')}"}/
       .container
@@ -65,7 +80,7 @@
             into the intuitive problem-space of airplanes, runways, and
             weather conditions?
           %p
-            %a.btn.btn-lg.btn-primary{href: "#boeing", role: "button"} Learn More
+            %a.btn.btn-sm.btn-primary{href: "#boeing", role: "button"} Learn More
     .item
       %img.seattle_astro{alt: "@SeattleAstro", src: "#{asset_path('Transparent.gif')}"}/
       .container
@@ -77,304 +92,21 @@
             experiences combined themselves into a completely re-invented online
             experience for Seattle Astronomical Society.
           %p
-            %a.btn.btn-lg.btn-primary{href: "#seattle_astro", role: "button"} Learn More
+            %a.btn.btn-sm.btn-primary{href: "#seattle_astro", role: "button"} Learn More
   %a.left.carousel-control{"data-slide" => "prev", href: "#portfolioCarousel", role: "button"}
     %span.glyphicon.glyphicon-chevron-left
   %a.right.carousel-control{"data-slide" => "next", href: "#portfolioCarousel", role: "button"}
     %span.glyphicon.glyphicon-chevron-right
 .container
-  %a{name: "shs"}
-  %h2 Reimagining Home Services @ SHS
-  %p.lead
-    How do you start with a clean slate and re-build both the technical stack
-    and overall user experience for all of Sears Home Services?  This is
-    what our team was formed to do, and is doing now today.
-  %p
-    I joined the team as the fifth member (and first engineer) at the end of 2014.
-    Since then, I have helped grow the engineering team to over two dozen front-end
-    and full-stack engineers.  I wrote the first few services that today help
-    serve all the front-end experiences.  I also established the software
-    life-cycle processes and tooling to ensure that we
-    =link_to 'contintuously deploy and integrate for each and every commit.', 'https://blog.codeship.com/how-sears-home-services-improve-their-workflow-with-codeship/'
-  %p
-    We have grown rapidly, both in size of team, and scope of responsibility.  As
-    a consequence, we are continually adopting our processes and tools to meet
-    our needs.  We strive to automate everything we can, and additionally own everything
-    we ship including unit-, functional-, integration-, and performance-tests,
-    devops and on-call.  We do not throw our problems on to other teams to solve.
-    We work side-by-side PMs and Designers to ensure that we collectively deliver
-    world-class experiences for our customers.  And even when we make a mistake, we
-    help each other get back up and try again.  Ultimately, my responsibility is
-    foster a work environment where team members are empowered to do the right thing
-    every time.
 
-  %a{name: "xbox"}
-  %h2 Personalizing Discovery @ XboxOne
-  %p.lead
-    With an ever-growing catalog of first- and third-party
-    sources, how do you blend together both search and browse into a single,
-    cohesive experience?  More so, how do you do so across a federated space
-    of different services, all while maintaining the flexability for real-time
-    changes, even when there are millions of simultaneous users?
-  %p
-    When we said we wanted to personalize XboxOne, we meant much more than
-    just allowing our customers the ability to select their favorite color.
-    For us, personalization meant giving customers quick access to their
-    favorites with deep-linked Pins. It meant solving the cold-start problem
-    of an engaging experience from Day Zero. And it meant growing that
-    experience by adopting to their implicit preferences and likes over time.
-    While XboxOne was inarguably built as a game console, we were
-    determined to also make it a multi-media platform.
-  %p
-    As such, when we began to imagine XboxOne, we concentrated our efforts
-    on how our customers discover and enjoy content, regardless of whether it
-    is a game, a movie, or a song.  Historically, many sites approach the
-    problem of a large catalog by slapping on search (aka solve for the
-    %i lean-forward
-    user intent) and calling it a day, letting you find
-    the content.  But that is not enough. Some days you do not know what you
-    want (aka
-    %i lean-back
-    user intent) and you want the content to find
-    you.  Again, many sites slap on a taxonomy for customers to browse, but
-    this can be unwieldly for a large corpus of content types and genres, not
-    to mention that
-    %i how
-    you construct your taxonomy varies by culture.
-    Even when using sophisticated browse approaches — such as
-    recommendations or editorial picks — any single approach cannot
-    support every user intent.  Our challenge, then, was to figure out how to
-    harmonize multiple
-    %i discovery vectors
-    into a single, cohesive
-    experience.
-  %p
-    Beyond the aforementioned search and browse vectors,  we wanted to
-    include a variety of new discovery vectors.  These included editorial
-    picks, recommendations, and social suggestions, to name just a few.  We
-    knew from experience that each discovery vector worked better for certain
-    media-types, and could vary by customer.  We were aware that some
-    customers were motivated by top hits, while others would watch a movie a
-    friend had watched.  In order for us to truly provide a personalized
-    experience, we needed to be able to boost one vector at the expense of
-    another based on a customer's behavior. For example, if you tended to
-    watch sci-fi movies on Friday nights, we combined this with the fact that
-    you converted from a top 10 list better than a recommendation to ensure we
-    placed "top 10 sci-fi movies" front and center.
-  %p
-    This is where I entered the picture. During the design of XboxOne, I
-    played a key role in promoting this next-level personalization on both the
-    services and experiential sides.  I introduced the abstraction of an
-    %i ascriptive spectrum
-    that was necessary to support these different
-    discovery vectors. More specifically, we created a syntax that allowed one
-    side of the spectrum (perscriptive vectors such as Editorial) to be
-    interwoven with the other side (descriptive vectors such as
-    Recommendations).  I championed — and led the team that eventually
-    delivered — the architecture that now powers Xbox Home, Pins, Store,
-    and Search.
-  %p
-    As noted previously, the goal that I set for my team was to find a way
-    to bring together any number of disparate discovery vectors (
-    %i e.g.
-    search, recommendations, top 10, editorial picks) and mix them together in
-    a way that allowed us to change (boost or decrease) a signal based upon
-    A/B testing.  An additional goal was to do this entirely from the services
-    side, thus obviating the need for an XboxOne flash update whenever we
-    wanted to change the console experience, as is still the case with
-    Xbox360.
-  %p
-    We achieved these goals to the extent that — from our customers
-    perspective — it is now perceived as a single unified
-    = succeed "," do
-      %i
-        user
-        experience
-
-  %a{name: "amazon"}
-  %h2 Food &amp; Totes @ Amazon
-  %p.lead
-    How do you replace the very analog and tactile experience
-    of   shopping for food   with a completely digital one?  Can you change
-    the
-    %i end-to-end experience
-    of one of the largest online retailers,
-    and in the process, make it feel more like your   best friend   dropped
-    off a few items from the store?
-  %p
-    At both
-    %b AmazonFresh
-    and
-    %b AmazonTote
-    our goal was to change
-    the
-    %i last-mile experience
-    for our customers. Namely, we believed
-    that the experience we provided our customers extended past the website,
-    right up to the time their order arrived at their door. In this context,
-    Design takes on multiple new dimensions and challenges that are not
-    normally encountered with a purely digital experience.
-  %p
-    At
-    = succeed "," do
-      %b AmazonFresh
-    we were challenged with any number of problems
-    on a weekly basis.  From an experiential perspective,   we needed to go
-    deep into customer psychology to understand how people approached shopping
-    for food, something that is &mdash; for many &mdash; a very personal and
-    subjective experience. How do you earn their trust when selecting and
-    handling their produce on their behalf?  How do you convey to them package
-    size in a way that is intuitive and immediately accessible when every item
-    on your website has the same real-estate?  How do you design an experience
-    that works equally well for shoppers who walk up and down every aisle to
-    find what they need,  as well as for "spear-fisherman" shoppers who know
-    exactly what they want?  How do you set expectations and predict inventory
-    when much of your perishable goods may go bad?  How do you solve warehouse
-    packing problems (for which I received two patents) in a way that both
-    reduces warehouse walk-time and increases packing density? As a senior
-    engineer on the team, I helped solve these and many other challenges from
-    a continuously fed backlog of stories, with responsibilities covering every
-    aspect from requirements gathering, to UX design, to test-driven
-    development, and even operations.
-
-  %p
-    At
-    = succeed "," do
-      %b AmazonTote
-    we again looked to redefine the last-mile
-    experience, but this time for the entirety of Amazon.com.  I was in charge
-    of a small team, composed of an engineer and a designer, along with an
-    external design firm for graphic logo design.  I pulled double-duty;
-    during the day I was its product manager, and at night its front-end
-    developer.  Together we created &mdash; soup to nuts &mdash; an entirely
-    new buying experience for which I am named in four patents.  We launched
-    AmazonTote in under ten weeks, which included: 1) design and procurement of
-    tote-bags from China; 2) setting up a fulfillment center; 3) complete
-    design and implementation of a website experience; and 4) all logistics
-    including delivery.
-
-  %p
-    Ultimately, we designed an
-    %i end-to-end
-    experience that utilized
-    elements of 1-click, but expanded it to include a critical "your tote-bag"
-    ordering page where you managed your upcoming delivery. Our primary goal
-    was to create a delivery experience that felt more like a friend had
-    dropped off a few items on their way back from the store, rather than
-    echoing delivery through a national carrier. While the pilot program has
-    since moved on to further stages of investigation, the results we
-    collected around buying behavior and consumer loyalty to the program
-    proved that we had nailed it experientially.
-
-  =render partial: 'shared/carousel', locals: { carousel: 'AmazonTote', slides: @carousels['AmazonTote']}
-
-  %a{name: "boeing"}
-  %h2 Airplanes Over Databases @ Boeing
-  %p.lead
-    How do you take thirty years of technology and hundreds of
-    databases, and with those provide a
-    %i user experience
-    that moves
-    customers out of the solution-space of command-lines and into the
-    intuitive problem-space of airplanes, runways, and weather conditions?
-  %p
-    Imagine over three decades of aerospace engineers creating airplane
-    performance databases that span every conceivable airplane and engine
-    configuration for a range of flight regimes such as takeoff, landing and
-    enroute navigation. Now imagine that each of these databases has minimally
-    hundreds, and quite possibly thousands of input variables that you have to
-    set correctly in order to perform a calculation.  And then imagine that
-    you have to do so by entering them into a
-    %code text
-    file,
-    referencing a separate Word document to learn what each obscure variable
-    name means.  And once you have this ready, you have to run it from the
-    %code DOS
-    command-line to get results that you then import into
-    Excel to finally begin to do analysis.
-  %p
-    When I arrived at Boeing in 2000, this was considered
-    "state-of-the-art" for flight operations engineers at airlines around the
-    world who operated our airplanes.  I spent the next five years championing
-    an entirely new experience for our customers, finally convincing
-    management to let me lead an effort that — I believe —
-    dramatically improved things for everyone.  Namely, we replaced
-    command-line prompts and obscure variable names with immediately
-    understandable nouns such as airplanes, engines, airports and atmospheric
-    condition.
-  %p
-    To achieve this, we needed to hide away all the details of the
-    databases in a way that was scalable for both our customers and our
-    database developers. With hundreds of databases and thousands of
-    exceptions, it was not practical to hard-wire the exceptions into the
-    application, as had been done in the past.  Instead, I designed a
-    XML-formmatted DSL (domain-specific language) that allowed the database
-    developers to create a
-    %i self-describing database
-    that not only
-    defined all the variables and their legal values, but also all the rules
-    that governed these variables. I then implemented the run-time state
-    machine that powered the UI from this XML, effectively allowing us to
-    generate UI on-the-fly.   As lead developer and designer, I lead the team
-    to hide from our customers all the complexities of our previous
-    implementations, and in its place let customers focus on the more
-    intuitive problem-space where they selected the airplane and engine
-    configuration and put it in context to the airport(s) and atmospheric
-    condition(s) relevant to the analysis. We even included a complete
-    post-computation analysis experience that integrated the power of pivot
-    tables and charts so that customers could immediately jump into the heart of
-    things once a calculation was complete.
-  %p
-    We were not only successful at the
-    %i product experience
-    level, but
-    we succeed on the process-level, too.  I took a group of six aerospace
-    engineers, and I taught them object-oriented programming and agile
-    best-practices such as: 1) software version control; 2) test-driven
-    development; 3) design patterns such as MVC, pub-sub, flywheel, etc.; 4)
-    dependency management and injection; and, 5) continuous integration...all
-    of which we accomplished in under two years.
-
-  %a{name: "seattle_astro"}
-  %h2 Skies over Seattle @ SeattleAstro
-  %p.lead
-    My passion for astronomy, community outreach and beautiful, hand-crafted
-    experiences combined themselves into a completely re-invented online
-    experience for
-    =link_to 'Seattle Astronomical Society.', 'http://seattleastro.org'
-  %p
-    I took over the society's website some three years ago. In that time, I
-    worked with the Board to create a visual language, information architecture,
-    and overall design for the entire site.  I am responsible for every aspect
-    of the site, including a responsively-designed front-end that leverages
-    Bootstrap, SASS, and Javascript.  There is extensive administrative features
-    both for members to maintain their own information, along with roles-based
-    permissions for Board members and site moderators.  The site also integrates
-    with Mandrill for all transactional emails, and provides a complete end-to-end
-    integration with PayPal to obviate the need for manual processing of checks or
-    cash, although these payment means are still available to members.
-  %p
-    Since
-    introducing the website, we have seen membership increase year-over-year, much of
-    it attributal to a more welcoming online presence that helps drive a sense of
-    community amongst our members and the greater communities of Seattle.
-  %p
-    I was recongized in 2014 as
-    %b Webmaster of the Year
-    by the
-    =link_to 'Astronomical League', 'https://www.astroleague.org/al/awards/webmst/webmstr.html'
-    for the significant contributions to astronomy and community-building through
-    the website.
-
-  =render partial: 'shared/carousel', locals: { carousel: 'SeattleAstro', slides: @carousels['SeattleAstro']}
+  =render partial: 'pages/portfolio/shs'
+  =render partial: 'pages/portfolio/azure'
+  =render partial: 'pages/portfolio/xbox'
+  =render partial: 'pages/portfolio/amazon'
+  =render partial: 'pages/portfolio/boeing'
+  =render partial: 'pages/portfolio/seattle_astro'
 
 :javascript
-  $('#portfolioCarouselAmazonTote').carousel({
-      interval: 5000
-  })
-  $('#portfolioCarouselSeattleAstro').carousel({
-      interval: 5000
-  })
   $('#portfolioCarousel').carousel({
       interval: 7000
   })

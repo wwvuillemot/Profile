@@ -1,23 +1,23 @@
 
 .carousel-indicators
-  top: 90%
+  top: 86.5%
+
 
 .carousel-indicators li
   color: #c3c3c3
   text-indent: 0px
-  min-width: 70px
   border: 0px
-  height: 20px
-  font-size: 0.9em
-
-.carousel-indicators li.active
-  color: black
-  text-indent: 0px
-  border: 0px
-  min-width: 100px
-  height: 20px
-  background: white
+  min-width: 125px
+  height: 22px
+  font-size: 0.8em
   line-height: 22px
+  height: 22px !important
+  &:hover
+    background-color: #ddd
+    color: #666
+  &.active
+    color: black
+    background: white
 
 .item
   .container
@@ -30,6 +30,16 @@
     background-color: $color
   .carousel-indicators li.#{$company}.active
     color: $color
+  div.#{$company}
+    ul.tag
+      float: right
+      font-size: 0.7em
+      li
+        color: white
+        background-color: $color
+        padding: 2px 5px 2px 5px
+        margin-bottom: 1px
+        border-radius: 3px
 
 =company-carousel($company, $color)
   #portfolioCarousel#{$company}, #portfolioCarousel#{$company} .carousel
@@ -41,6 +51,7 @@
     height: 400px !important
 
 +company-color('shs',    rgb(0, 57, 128))
++company-color('azure',   rgb(27, 161, 226))
 +company-color('xbox',   rgb(16, 124, 16))
 +company-color('amazon', rgb(228, 121, 17))
 +company-carousel('AmazonTote', rgb(228, 121, 17))

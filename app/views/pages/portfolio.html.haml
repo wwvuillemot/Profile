@@ -15,9 +15,7 @@
         .carousel-caption
           %h1 Reimagining Home Services
           %p
-            How do you start with a clean slate and re-build both the technical stack
-            and overall user experience for all of Sears Home Services?  This is
-            what our team was formed to do, and is doing now today.
+            =render partial: 'pages/lead/shs'
           %p
             %a.btn.btn-sm.btn-primary{href: "#shs", role: "button"} Learn More
     .item
@@ -27,11 +25,7 @@
         .carousel-caption
           %h1 Games as a Service
           %p
-            Free-to-play games usher in an era of
-            "games as a service," requiring the need to guarantee
-            engaging, evolving gameplay and content, while at the same time
-            generating revenue over the life of the game.  We looked to understand
-            this space through iterative, boots-on-the-ground customer development.
+            =render partial: 'pages/lead/azure'
           %p
             %a.btn.btn-sm.btn-primary{href: "#azure", role: "button"} Learn More
     .item
@@ -41,12 +35,7 @@
         .carousel-caption
           %h1 Personalizing Discovery
           %p
-            With an ever-growing catalog of first- and third-party sources,
-            how do you blend together both search and browse into a single,
-            cohesive experience?  More so, how do you do so across a federated
-            space of different services, all while maintaining the flexability
-            for real-time changes, even when there are millions of simultaneous
-            users?
+            =render partial: 'pages/lead/xbox'
           %p
             %a.btn.btn-sm.btn-primary{href: "#xbox", role: "button"} Learn More
     .item
@@ -56,13 +45,7 @@
         .carousel-caption
           %h1 Food &amp; Totes
           %p
-            How do you replace the very analog and tactile experience of
-            shopping for food with a completely digital one?  Can you change
-            the
-            %i end-to-end experience
-            of one of the   largest online
-            retailers, and in the process, make it feel more like your  best
-            friend dropped off a few items from the store?
+            =render partial: 'pages/lead/amazon'
           %p
             %a.btn.btn-sm.btn-primary{href: "#amazon", role: "button"} Learn More
     .item
@@ -72,13 +55,7 @@
         .carousel-caption
           %h1 Planes Over Databases
           %p
-            How do you take 30 years of technology and hundreds of
-            databases, and provide a
-            %i user experience
-            that
-            moves customers out of the solution-space of command-lines and
-            into the intuitive problem-space of airplanes, runways, and
-            weather conditions?
+            =render partial: 'pages/lead/boeing'
           %p
             %a.btn.btn-sm.btn-primary{href: "#boeing", role: "button"} Learn More
     .item
@@ -88,9 +65,7 @@
         .carousel-caption
           %h1 Skies Over Seattle
           %p
-            My passion for astronomy, community outreach and beautiful, hand-crafted
-            experiences combined themselves into a completely re-invented online
-            experience for Seattle Astronomical Society.
+            =render partial: 'pages/lead/seattle_astro'
           %p
             %a.btn.btn-sm.btn-primary{href: "#seattle_astro", role: "button"} Learn More
   %a.left.carousel-control{"data-slide" => "prev", href: "#portfolioCarousel", role: "button"}

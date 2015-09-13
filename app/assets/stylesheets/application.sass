@@ -20,14 +20,12 @@ body
   padding-top: 20px
   padding-bottom: 20px
 
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer
   padding-right: 15px
   padding-left: 15px
-
 
 /* Custom page header */
 .header
@@ -40,23 +38,19 @@ body
   margin-bottom: 0
   line-height: 40px
 
-
 /* Custom page footer */
 .footer
   padding-top: 19px
   color: #777
   border-top: 1px solid #e5e5e5
 
-
 /* Customize container */
 @media (min-width: 768px)
   .container
     max-width: 730px
 
-
 .container-narrow > hr
   margin: 30px 0
-
 
 /* Main marketing message and sign up button */
 .jumbotron
@@ -84,7 +78,15 @@ body
   width: 50%
   border: 0px
   border-radius: 50%
+  &.small
+    width: 32px
+    display: inline
+    margin-left: 5px
+    margin-right: 5px
 
+a.plain
+  text-decoration: none
+  color: rgb(119, 119, 119)
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px)
@@ -102,41 +104,3 @@ body
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron
     border-bottom: 0
-
-
-
-
-/* Carousel base class */
-.carousel
-  height: 400px
-  margin-bottom: 30px
-
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption
-  z-index: 10
-
-
-.carousel-inner > .item > .container img
-  height: 128px
-  position: relative
-  /*position: relative*/
-  /*top: 00px*/
-  // left: 40%
-  text-align: center
-  top: 15px
-  margin: 0px auto 0px auto
-  opacity: 0.6
-  filter: alpha(opacity=60)
-
-
-/* Declare heights because of positioning of img element */
-.carousel .item
-  height: 400px
-  background-color: #777
-
-.carousel-inner > .item > img
-  position: absolute
-  top: 0px
-  left: 0
-  min-width: 100%
-  height: 500px

@@ -14,4 +14,11 @@ class Slide
   def to_partial_path
     'slides/slide'
   end
+
+  def ==(another_slide)
+    order == another_slide.order
+    title == another_slide.title
+    description == another_slide.description
+    active == another_slide.active
+  end
 end

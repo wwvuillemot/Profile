@@ -21,7 +21,12 @@ describe Slide do
   end
   it 'should return slides for amazon tote' do
     slides = Slide.find(:amazon)
+    company = Company.find(:amazon)
     expect(slides).not_to be_empty
+    slides.each do |slide|
+      expect(slide.company).to eq(company)
+      expect(company.slides).to eq(slides)
+    end
   end
   it 'should return slides for seattle astro' do
     slides = Slide.find(:seattle_astro)

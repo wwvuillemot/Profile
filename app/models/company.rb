@@ -24,4 +24,10 @@ class Company
   def headline
     "#{title} @ #{short}"
   end
+
+  def ==(another_company)
+    slug == another_company.slug
+    short == another_company.short
+    title == another_company.title
+  end
 end

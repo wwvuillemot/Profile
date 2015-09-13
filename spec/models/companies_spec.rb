@@ -27,12 +27,14 @@ describe Company do
   end
   it 'should return seattle_astro' do
     seattle_astro = Company.find(:seattle_astro)
+    slides = Slide.find(:seattle_astro)
     expect(seattle_astro).not_to eql nil
-    expect(seattle_astro.slides).not_to eql nil
+    expect(seattle_astro.slides).not_to eql slides
   end
   it 'should return azure' do
     azure = Company.find(:azure)
+    slides = Slide.find(:azure)
     expect(azure).not_to eql nil
-    expect(azure.slides).to eql nil
+    expect(azure.slides).to eql slides
   end
 end

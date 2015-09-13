@@ -30,6 +30,12 @@
             -unless request.path == root_path
               %img.portrait.small{src: "#{asset_path('portrait.jpg')}"}/
 
+        .breadcrumbs
+          %ol.breadcrumb
+            %li=link_to 'Home', root_path
+            -@breadcrumbs && @breadcrumbs.each do |breadcrumb|
+              %li=link_to breadcrumb[:label], breadcrumb[:path]
+
       =yield
 
       .footer
@@ -38,7 +44,7 @@
             Ward W. Vuillemot, 2015
         %ul.nav.nav-pills.pull-right
           %li
-            %a{ href: aboutme_path}
+            %a{ href: about_me_path}
               %i.fa.fa-info-circle.fa-2x
           %li
             %a{ href: link_to_linkedin}

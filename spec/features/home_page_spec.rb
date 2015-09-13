@@ -10,7 +10,7 @@ feature 'Home page' do
   scenario 'visit the about me page from home' do
     visit root_path
     click_link('read_more_about_me')
-    check_aboutme_page(page)
+    check_about_me_page(page)
   end
 
   scenario 'visit the portfolio page from home' do

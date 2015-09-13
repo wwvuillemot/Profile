@@ -5,7 +5,8 @@
       -is_first = true
       -index = 0
       -@portfolio.each do |slug, company|
-        %li{ class: "#{company.slug} #{is_first ? 'active' : ''}", 'data-slide-to' => index, 'data-target' => '#portfolioCarousel'} @#{company.short}
+        %li{ class: "#{company.slug} #{is_first ? 'active' : ''}"}
+          =link_to "@#{company.short}", company_path(slug)
         -is_first = false
         -index = index + 1
   .carousel-inner
@@ -21,7 +22,7 @@
               =render partial: company.to_lead_path
             -unless @single_company
               %p
-                %a.btn.btn-sm.btn-primary{href: "##{company.slug}", role: "button"} Learn More
+                %a.btn.btn-sm.btn-primary{href: company_path(slug), role: "button"} Learn More
       -is_first = false
   -unless @single_company
     %a.left.carousel-control{"data-slide" => "prev", href: "#portfolioCarousel", role: "button"}
@@ -30,6 +31,7 @@
       %span.glyphicon.glyphicon-chevron-right
 .container
 
+-if @single_company
   -@portfolio.each do |slug, company|
     =render partial: company, locals: { company: company }
 

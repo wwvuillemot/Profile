@@ -34,7 +34,7 @@
           %ol.breadcrumb
             %li=link_to 'Home', root_path
             -@breadcrumbs && @breadcrumbs.each do |breadcrumb|
-              %li=link_to breadcrumb[:label], breadcrumb[:path]
+              %li=link_to raw(breadcrumb[:label]), breadcrumb[:path]
 
       =yield
 

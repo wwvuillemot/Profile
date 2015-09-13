@@ -17,7 +17,7 @@ module PageHelper
   end
 
   def check_home_page(page)
-    expect(page).to have_content "Hi! I am Ward."
+    expect(page).to have_content "Hi! I'm Ward."
   end
 
   def check_resume_page(page)

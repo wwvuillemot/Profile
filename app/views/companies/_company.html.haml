@@ -3,9 +3,10 @@
   %ul.tag
     -company.tags.each do |tag|
       %li{ role: :presentation}=tag
-  %h2=raw company.headline
-  %p.lead
-    =render partial: company.to_lead_path
+  -unless @single_company
+    %h2=raw company.headline
+    %p.lead
+      =render partial: company.to_lead_path
 
   =render partial: company.to_details_path, locals: { company: company }
 

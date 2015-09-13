@@ -7,6 +7,11 @@ module PageHelper
     expect(page).to have_content "@ SeattleAstro"
   end
 
+  def check_company_page(page, company)
+    expect(page).not_to have_content "@ #{company.short}"
+    expect(page).to have_content CGI.unescapeHTML(company.title)
+  end
+
   def check_aboutme_page(page)
     expect(page).to have_content 'Who Am I?'
   end
